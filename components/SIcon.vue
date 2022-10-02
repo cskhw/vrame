@@ -15,7 +15,7 @@ import { CSSProperties } from "vue";
 const props = withDefaults(
   defineProps<{
     icon: string;
-    color: string;
+    color?: string;
     iconStyle?: CSSProperties;
     link?: boolean;
   }>(),
