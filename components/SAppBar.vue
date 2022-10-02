@@ -6,21 +6,28 @@
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
+        padding: '1rem',
         width: '100%',
-        height: '5rem',
+        height: '2rem',
         backgroundColor: 'black',
         color: 'white',
       },
       appBarStyle,
     ]"
   >
-    <svg>{{ mdiDragHorizontal }}</svg>
+    <s-icon
+      class="s-app-bar-drawer-icon"
+      v-if="!drawerIcon"
+      :icon="mdiReorderHorizontal"
+    />
+    <s-icon v-else :icon="drawerIcon" />
+
     <slot />
   </div>
 </template>
 <script setup lang="ts">
 import { CSSProperties } from "vue";
-import { mdiDragHorizontal } from "@mdi/js";
+import { mdiReorderHorizontal } from "@mdi/js";
 
 type Props = {
   appBarStyle?: CSSProperties;
@@ -29,4 +36,7 @@ type Props = {
 
 const props = defineProps<Props>();
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.s-app-bar-drawer-icon {
+}
+</style>

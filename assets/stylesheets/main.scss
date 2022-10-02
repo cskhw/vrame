@@ -1,0 +1,8 @@
+@import "./text";
+@import "./breakpoints";
+@import "./colors";
+
+.pt-btn:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
