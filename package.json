@@ -11,6 +11,8 @@
     "nuxt": "3.0.0-rc.11"
   },
   "dependencies": {
+    "@mdi/js": "^7.0.96",
+    "sass": "^1.55.0",
     "vuetify": "3.0.0-beta.11",
     "yarn": "^1.22.19"
   }
