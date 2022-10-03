@@ -1,16 +1,5 @@
 <template>
-  <div
-    class="s-app-bar"
-    :style="[
-      {
-        left: appStore.isShowDrawer ? appStore.drawerWidth + 'px' : '0',
-        width: appStore.isShowDrawer
-          ? `calc(100% - ${appStore.drawerWidth}px - 32px)`
-          : 'calc(100% - 32px)',
-      },
-      appBarStyle,
-    ]"
-  >
+  <div class="s-app-bar" :style="[_appbarStyle]">
     <!-- default drawer icon -->
     <s-icon
       v-if="!drawerIcon"
@@ -37,9 +26,21 @@ import useAppStore from "@/stores/useAppStore";
 const props = defineProps<{
   appBarStyle?: CSSProperties;
   drawerIcon?: string;
+  shadow?: string;
+  border?: string;
 }>();
 
 const appStore = useAppStore();
+
+const _appbarStyle = computed(() => ({
+  ...props.appBarStyle,
+  left: appStore.isShowDrawer ? appStore.drawerWidth + "px" : "0",
+  width: appStore.isShowDrawer
+    ? `calc(100% - ${appStore.drawerWidth}px - 32px)`
+    : "calc(100% - 32px)",
+  borderBottom: props.border || "1px solid #e0e0e0",
+  boxShadow: props.shadow || "0 0 6px 1px rgba(0,0,0,0.3)",
+}));
 </script>
 
 <style lang="scss">
@@ -53,7 +54,7 @@ const appStore = useAppStore();
   position: relative;
   width: 100%;
   height: 2rem;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 </style>

@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 
 export default defineStore("app", {
   state: () => ({
-    isShowDrawer: true,
+    isShowDrawer: false,
     drawerWidth: "250",
   }),
   getters: {},
