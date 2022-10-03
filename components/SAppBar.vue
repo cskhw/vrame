@@ -22,6 +22,7 @@
 import { CSSProperties } from "vue";
 import { mdiReorderHorizontal } from "@mdi/js";
 import useAppStore from "@/stores/useAppStore";
+import colors from "~~/utils/colors";
 
 const props = defineProps<{
   appBarStyle?: CSSProperties;
@@ -34,7 +35,7 @@ const props = defineProps<{
 const appStore = useAppStore();
 
 const _appbarStyle = computed(() => ({
-  borderBottom: props.border || "1px solid #e0e0e0",
+  borderBottom: props.border || `1px solid ${colors.commonBorder}`,
   boxShadow: props.shadow && "0 0 6px 1px rgba(0,0,0,0.3)",
   height: props.height,
   ...props.appBarStyle,

@@ -1,5 +1,21 @@
 {
-  "private": true,
+  "name": "simplify",
+  "version": "0.0.1",
+  "description": "Most Simple Vue Ui Framework",
+  "author": "cskhw",
+  "bin": {
+    "log-run": "bin/cli.js"
+  },
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "ui",
+    "simplify",
+    "simple"
+  ],
+  "files": [
+    "cli"
+  ],
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -12,6 +28,7 @@
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",
+    "commander": "^9.4.1",
     "pinia": "^2.0.22",
     "sass": "^1.55.0",
     "yarn": "^1.22.19"
