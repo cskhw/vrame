@@ -1,0 +1,10 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .introduction-body {
+    width: 50%;
+  }
+}

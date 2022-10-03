@@ -1,0 +1,24 @@
+@import "./text";
+@import "./breakpoints";
+@import "./colors";
+
+body {
+  margin: 0;
+}
+
+.pt-btn:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.code {
+  width: max-content;
+
+  padding: 1rem;
+
+  background-color: #eeeeee;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.25rem;
+
+  color: #666666;
+}

@@ -1,0 +1,36 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 60vw;
+
+  text-align: center;
+  .home-icon {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    font-size: 100px;
+  }
+  .home-title {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  .home-desc {
+    font-size: 1.25rem;
+    color: #666666;
+  }
+  .home-btns-box {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 12.5rem);
+    margin: 100px 0;
+  }
+  .home-footer {
+    font-family: "Times New Roman", Times, serif;
+    color: #1b1a1b;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
