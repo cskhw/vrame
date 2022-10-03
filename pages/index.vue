@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <!-- appbar -->
-    <s-app-bar> Simplify </s-app-bar>
+    <s-appbar> Simplify </s-appbar>
     <s-drawer>fdsa</s-drawer>
     <!-- drawer -->
   </div>

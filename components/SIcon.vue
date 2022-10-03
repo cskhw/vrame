@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="s-icon"
-    :class="[link && 'pt-btn']"
-    :style="[{ width: '20px', height: '20px' }, iconStyle]"
-  >
+  <div class="s-icon" :class="[link && 'pt-btn']" :style="[_iconStyle]">
     <svg :fill="color">
       <path :d="icon"></path>
     </svg>
@@ -23,4 +19,11 @@ const props = withDefaults(
     color: "grey",
   }
 );
+
+const _iconStyle = computed(() => ({
+  width: "24px",
+  height: "24px",
+  overflow: "hidden",
+  ...props.iconStyle,
+}));
 </script>
