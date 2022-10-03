@@ -1,5 +1,5 @@
 {
-  "name": "simplify",
+  "name": "simplipy",
   "version": "0.0.1",
   "description": "Most Simple Vue Ui Framework",
   "author": "cskhw",
@@ -10,7 +10,7 @@
   "keywords": [
     "vue",
     "ui",
-    "simplify",
+    "simplipy",
     "simple"
   ],
   "files": [

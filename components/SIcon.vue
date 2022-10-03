@@ -1,6 +1,10 @@
 <template>
   <div class="s-icon" :class="[link && 'pt-btn']" :style="[_iconStyle]">
-    <svg :fill="color">
+    <svg
+      style="width: max-content; height: max-content"
+      :fill="color"
+      :viewBox="viewBox"
+    >
       <path :d="icon"></path>
     </svg>
   </div>
@@ -14,6 +18,7 @@ const props = withDefaults(
     color?: string;
     iconStyle?: CSSProperties;
     link?: boolean;
+    viewBox?: string;
   }>(),
   {
     color: "grey",

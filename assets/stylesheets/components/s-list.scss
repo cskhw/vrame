@@ -5,6 +5,11 @@
 
   padding: 0 0.5rem;
 
+  position: relative;
   height: 32px;
   border-radius: 8px;
+  .s-list-downicon {
+    position: absolute;
+    right: 0;
+  }
 }

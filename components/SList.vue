@@ -14,12 +14,12 @@
     <div :style="_titleStyle">
       <slot name="title"></slot>
     </div>
-    <SIcon />
+    <SIcon v-if="children" class="s-list-downicon" :icon="mdiMenuDown" />
   </div>
 </template>
 <script setup lang="ts">
+import { mdiMenuDown } from "@mdi/js";
 import { CSSProperties } from "vue";
-import { routerKey } from "vue-router";
 
 const router = useRouter();
 

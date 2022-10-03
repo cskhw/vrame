@@ -1,19 +1,26 @@
 <template>
   <div class="s-app-bar" :style="[_appbarStyle]">
     <!-- default drawer icon -->
-    <s-icon
-      v-if="!drawerIcon"
-      class="pt-btn"
-      :icon="mdiReorderHorizontal"
-      @click="appStore.isShowDrawer = !appStore.isShowDrawer"
-    />
-    <!-- user drawer icon -->
-    <s-icon
-      v-else
-      class="pt-btn"
-      :icon="drawerIcon"
-      @click="appStore.isShowDrawer = !appStore.isShowDrawer"
-    />
+    <template v-if="drawerIcon">
+      <s-icon
+        v-if="typeof drawerIcon == 'boolean'"
+        class="pt-btn"
+        view-box="0 0 24 24"
+        :icon-style="{
+          width: '40px',
+          height: '40px',
+        }"
+        :icon="mdiReorderHorizontal"
+        @click="appStore.isShowDrawer = !appStore.isShowDrawer"
+      />
+      <!-- user drawer icon -->
+      <s-icon
+        v-if="typeof drawerIcon == 'string'"
+        class="pt-btn"
+        :icon="(drawerIcon as string)"
+        @click="appStore.isShowDrawer = !appStore.isShowDrawer"
+      />
+    </template>
 
     <slot />
   </div>
@@ -26,7 +33,7 @@ import colors from "~~/utils/colors";
 
 const props = defineProps<{
   appBarStyle?: CSSProperties;
-  drawerIcon?: string;
+  drawerIcon?: boolean | string;
   height?: string;
   shadow?: string;
   border?: string;

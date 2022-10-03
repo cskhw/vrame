@@ -2,7 +2,7 @@
   <div class="introduction">
     <h1 class="introduction-icon">S</h1>
     <h1 class="introduction-title">Most Simple Vue Ui Framework</h1>
-    <div class="introduction-desc">Simplify is simple.</div>
+    <div class="introduction-desc">Simplipy is simple.</div>
 
     <div class="introduction-btns-box">
       <s-btn
