@@ -14,25 +14,18 @@
     <div :style="_titleStyle">
       <slot name="title"></slot>
     </div>
-    <s-icon v-if="children" class="s-list-downicon" :icon="mdiMenuDown" />
+    fdsa
+    {{ children }}
+    <SIcon v-if="children" class="s-list-downicon" :icon="mdiMenuDown" />
   </div>
 </template>
 <script setup lang="ts">
+import type { TSList } from "@/types/component";
 import { mdiMenuDown } from "@mdi/js";
 import type { CSSProperties } from "vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
-
-type TSList = {
-  listStyle?: CSSProperties;
-  icon?: { icon: string; color: string };
-  hoverColor?: string;
-  hoverBgColor?: string;
-  link?: boolean;
-  to?: string;
-  children?: () => TSList[];
-};
 
 const props = defineProps<{
   listStyle?: CSSProperties;

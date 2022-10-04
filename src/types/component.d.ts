@@ -17,3 +17,13 @@ export interface IIComponentSpinner {
     status?: Ref<boolean>
   ) => F;
 }
+
+export interface TSList {
+  listStyle?: CSSProperties;
+  icon?: { icon: string; color: string };
+  hoverColor?: string;
+  hoverBgColor?: string;
+  link?: boolean;
+  to?: string;
+  children?: TSList[];
+}

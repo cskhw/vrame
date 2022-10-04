@@ -18,7 +18,8 @@
         to="/sappbar"
         :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)' }"
         hover-color="blue"
-        ><template #title>s-appbar</template></s-list
+        :children="[]"
+        ><template #title>sappbar</template></s-list
       >
       <s-list
         link
