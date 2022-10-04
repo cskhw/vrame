@@ -1,3 +1,5 @@
+@import "@/assets/stylesheets/colors";
+
 $start: 0;
 $end: 60;
 
@@ -17,6 +19,27 @@ $end: 60;
     font-weight: 400;
     font-size: calc($i * 0.0625) + rem;
   }
+  .text-bold-#{$i}-lightgray {
+    color: gray;
+    font-weight: bold;
+    font-size: calc($i * 0.0625) + rem;
+  }
+  .text-500-#{$i}-lightgray {
+    color: $light-gray;
+    font-weight: 500;
+    font-size: calc($i * 0.0625) + rem;
+  }
+  .text-400-#{$i}-lightgray {
+    color: $light-gray;
+    font-weight: 400;
+    font-size: calc($i * 0.0625) + rem;
+  }
+  .text-300-#{$i}-lightgray {
+    color: $light-gray;
+    font-weight: 300;
+    font-size: calc($i * 0.0625) + rem;
+  }
+
   .text-bold-#{$i}-gray {
     color: gray;
     font-weight: bold;

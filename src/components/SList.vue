@@ -114,9 +114,9 @@ const _titleStyle = computed(() => ({
 
 const sListDownIcon = computed(() => {
   if (isDownIconDown.value) {
-    return mdiMenuUp;
-  } else {
     return mdiMenuDown;
+  } else {
+    return mdiMenuUp;
   }
 });
 

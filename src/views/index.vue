@@ -12,8 +12,22 @@
         ><img class="pt-btn" src="@/assets/images/simplipy.png" width="60" />
       </s-btn>
     </s-appbar>
-    <s-drawer
-      ><s-list
+    <s-drawer>
+      <s-list
+        link
+        to="introduction"
+        :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)', to: '/sappbar' }"
+        hover-color="blue"
+        ><template #title>introduction</template></s-list
+      >
+      <s-list
+        link
+        to="installation"
+        :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)', to: '/sappbar' }"
+        hover-color="blue"
+        ><template #title>installation</template></s-list
+      >
+      <s-list
         link
         :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)', to: '/sappbar' }"
         hover-color="blue"
@@ -55,8 +69,4 @@ const drawreChildren = ref<TSList[]>([
   },
 ]);
 </script>
-<style lang="scss" scoped>
-.body {
-  padding: 2rem;
-}
-</style>
+<style lang="scss" scoped></style>

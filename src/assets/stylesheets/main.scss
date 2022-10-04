@@ -12,7 +12,7 @@ body {
 }
 
 .code {
-  width: max-content;
+  width: 100%;
 
   padding: 1rem;
 
@@ -21,4 +21,37 @@ body {
   border-radius: 0.25rem;
 
   color: #666666;
+}
+
+.body {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.components-body {
+  width: 50rem;
+
+  @media only screen and (max-width: $notebook) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    width: 18rem;
+  }
+}
+
+.title {
+  color: $smooth-black;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+  color: $smooth-black;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
