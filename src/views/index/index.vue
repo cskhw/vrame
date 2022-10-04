@@ -25,7 +25,10 @@
         GITHUB</s-btn
       >
     </div>
-    <div class="home-footer">developer: cskhw</div>
+    <div class="home-footer">
+      <p>developer: cskhw</p>
+      <p>email: gusdn0828@gmail.com</p>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
