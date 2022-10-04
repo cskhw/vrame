@@ -1,5 +1,5 @@
 import pinia from "@/plugins/pinia";
-import { createApp } from "vue";
+import { createApp, watch } from "vue";
 import App from "@/App.vue";
 import router from "./router";
 import components from "@/utils/components";
@@ -11,6 +11,7 @@ import { ref, reactive, computed } from "vue";
 window.ref = ref;
 window.reactive = reactive;
 window.computed = computed;
+window.watch = watch;
 
 for (const component of components) {
   app.component(component.name, component.component);

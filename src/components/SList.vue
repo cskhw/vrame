@@ -3,7 +3,7 @@
     <div
       class="s-list-body"
       :style="[_listStyle]"
-      @mouseenter="isHoverList = true"
+      @mouseenter="isHoverList = false"
       @mouseleave="isHoverList = false"
       @click="onClickSList"
     >
@@ -15,11 +15,11 @@
       <div :style="_titleStyle">
         <slot name="title"></slot>
       </div>
-      <Transition name="fade">
+      <Transition :name="downIconAnimeName">
         <s-icon
-          v-if="children?.length"
+          v-if="children?.length && isShowDownIcon"
           class="s-list-downicon"
-          :icon="mdiMenuDown"
+          :icon="sListDownIcon"
         />
       </Transition>
     </div>
@@ -40,7 +40,7 @@
 </template>
 <script setup lang="ts">
 import type { TSList } from "@/types/components";
-import { mdiMenuDown } from "@mdi/js";
+import { mdiMenuDown, mdiMenuUp } from "@mdi/js";
 import type { CSSProperties } from "vue";
 import { useRouter } from "vue-router";
 
@@ -58,6 +58,8 @@ const props = defineProps<{
 
 const isHoverList = ref(false);
 const isShowChildren = ref(false);
+const isShowDownIcon = ref(true);
+const isDownIconDown = ref(true);
 
 const listHoverBgColor = computed(() => {
   if (props.hoverBgColor) {
@@ -103,10 +105,31 @@ const _titleStyle = computed(() => ({
   color: listHoverColor.value,
 }));
 
+const sListDownIcon = computed(() => {
+  if (isDownIconDown.value) {
+    return mdiMenuUp;
+  } else {
+    return mdiMenuDown;
+  }
+});
+
+const downIconAnimeName = computed(() =>
+  isDownIconDown.value ? "rotate180" : "rotate-180"
+);
+
+function setDownIcon() {
+  isShowChildren.value = !isShowChildren.value;
+  isShowDownIcon.value = false;
+  isDownIconDown.value = !isDownIconDown.value;
+  setTimeout(() => {
+    isShowDownIcon.value = true;
+  }, 300);
+}
+
 function onClickSList(e: Event) {
   if (props.children?.length) {
     e.stopPropagation();
-    isShowChildren.value = !isShowChildren.value;
+    setDownIcon();
   }
   if (props.to) {
     router.push(props.to);

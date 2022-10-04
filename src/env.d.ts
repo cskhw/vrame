@@ -22,6 +22,40 @@ declare global {
     options: WritableComputedOptions<T>,
     debugOptions?: DebuggerOptions
   ): WritableComputedRef<T>;
+
+  // watch
+  export declare function watch<
+    T extends MultiWatchSources,
+    Immediate extends Readonly<boolean> = false
+  >(
+    sources: [...T],
+    cb: WatchCallback<MapSources<T, false>, MapSources<T, Immediate>>,
+    options?: WatchOptions<Immediate>
+  ): WatchStopHandle;
+
+  export declare function watch<
+    T extends Readonly<MultiWatchSources>,
+    Immediate extends Readonly<boolean> = false
+  >(
+    source: T,
+    cb: WatchCallback<MapSources<T, false>, MapSources<T, Immediate>>,
+    options?: WatchOptions<Immediate>
+  ): WatchStopHandle;
+
+  export declare function watch<T, Immediate extends Readonly<boolean> = false>(
+    source: WatchSource<T>,
+    cb: WatchCallback<T, Immediate extends true ? T | undefined : T>,
+    options?: WatchOptions<Immediate>
+  ): WatchStopHandle;
+
+  export declare function watch<
+    T extends object,
+    Immediate extends Readonly<boolean> = false
+  >(
+    source: T,
+    cb: WatchCallback<T, Immediate extends true ? T | undefined : T>,
+    options?: WatchOptions<Immediate>
+  ): WatchStopHandle;
 }
 
 // Env

@@ -43,13 +43,30 @@
   }
 }
 
-// lotate
-.rotate-enter-active,
-.rotate-leave-active {
-  transition: rotate 0.5s ease;
+// rotate180
+.rotate180-enter-active,
+.rotate180-leave-active {
+  transition: all ease-in-out 0.3s;
 }
 
-.rotate-enter-from,
-.rotate-leave-to {
+.rotate180-enter-from {
+  transform: rotate(0);
+}
+
+.rotate180-leave-to {
   transform: rotate(180deg);
+}
+
+// rotate-180
+.rotate-180-enter-active,
+.rotate-180-leave-active {
+  transition: all ease-in-out 0.3s;
+}
+
+.rotate-180-enter-from {
+  transform: rotate(0);
+}
+
+.rotate-180-leave-to {
+  transform: rotate(-180deg);
 }
