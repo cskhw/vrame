@@ -7,62 +7,93 @@
     </p>
 
     <div class="sub-title">props</div>
-    <li class="text-400-20-black">appBarStyle</li>
-    <p class="text-400-20-lightgray"><div>
-      <s-table v-model="tableItems" :headers="headers" :tableStyles="tableColumnSpec"></s-table>
-    </div></p>
+    <s-table
+    style="margin-bottom: 3rem"
+      v-model="tableItems"
+      :headers="headers"
+      :tableStyles="tableColumnSpec"
+    >
+    </s-table>
+
+    <div class="sub-title">Usage</div>
+    <p class="text-400-20-lightgray">
+      <div>
+        Usage
+      </div>
+    </p>
   </div>
 </template>
 <script setup lang="ts">
 import type { IpropsTable } from "@/types";
 import type { ISTableStyles } from "@/types/components";
 
-const headers = ref(['name', 'type', 'description'])
-const tableItems = ref< IpropsTable[]>([{
-  name: 'a',
-  type: 'b',
-  desc: 'test',
+const headers = ref(["name", "type", "description"]);
+const tableItems = ref<IpropsTable[]>([
+  {
+    name: "appBarStyle",
+    type: "CSSProperties | boolean | undefined",
+    desc: "Define s-appbar's style",
   },
   {
-  name: 'a',
-  type: 'b',
-  desc: 'test'
-},])
-const tableColumnSpec = computed<ISTableStyles>(() => ({
-  tableStyle: {
-    width: '100%',
+    name: "drawerIcon",
+    type: "string | boolean | undefined",
+    desc: `If drawerIcon's type is boolean, on/off display the default icon that on/off drawer.<br/>
+    If drawerIcons'type is string, display the user icon that in/off drawer.
+    `,
   },
-  tBodyStyle: {
-    width: '100%',
+  {
+    name: "shadow",
+    type: "string | boolean | undefined",
+    desc: `If shadow's type is string, display user shadow.<br/> If shadow's type is boolean, on/off display the default shadow.`,
   },
-  tHeaderStyle: {
-    width: '100%',
-    backgroundColor: '#eeeeee'
+  {
+    name: "border",
+    type: "string | boolean | undefined",
+    desc: `If border's type is string, display user border.<br/> If border's type is boolean, on/off display the default border.`,
   },
-  thStyle(i: number) {
-    if (i == 0) return {
-      width: '10%',
-    }
-    else if (i == 1) return {
-      width: '10%',
-    }
-    else if (i == 2) return {
-      width: '80%',
-    }
-  },
-  columnStyle(i: number) {
-    if (i == 0) return {
-      width: '10%',
-    }
-    else if (i == 1) return {
-      width: '10%',
-    }
-    else if (i == 2) return {
-      width: '80%',
-    }
-      
-  },
-}) as ISTableStyles)
-
+]);
+const tableColumnSpec = computed<ISTableStyles>(
+  () =>
+    ({
+      tableStyle: {
+        width: "100%",
+      },
+      tBodyStyle: {
+        width: "100%",
+      },
+      tHeaderStyle: {
+        width: "100%",
+        backgroundColor: "#eeeeee",
+      },
+      thStyle(i: number) {
+        if (i == 0)
+          return {
+            width: "20%",
+          };
+        else if (i == 1)
+          return {
+            width: "20%",
+          };
+        else if (i == 2)
+          return {
+            width: "60%",
+          };
+      },
+      columnStyle(i: number) {
+        if (i == 0)
+          return {
+            width: "20%",
+          };
+        else if (i == 1)
+          return {
+            width: "20%",
+          };
+        else if (i == 2)
+          return {
+            width: "60%",
+          };
+      },
+    } as ISTableStyles)
+);
 </script>
 <style lang="scss"></style>

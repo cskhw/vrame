@@ -17,7 +17,9 @@
         :style="[tableStyles?.thStyle ? tableStyles?.thStyle(i) : {}]"
         @click="() => onClickTh(header)"
       >
-        <slot name="header" :header="header"><div v-html="header"></div></slot>
+        <slot name="header" :idx="i" :header="header"
+          ><div v-html="header"></div
+        ></slot>
       </div>
     </div>
     <!-- body -->
@@ -43,7 +45,9 @@
           ]"
           @click="() => onClickTd(td)"
         >
-          <slot name="td" :td="td"><div v-html="td"></div></slot>
+          <slot name="td" :rIdx="i" :cIdx="j" :td="td"
+            ><div v-html="td"></div
+          ></slot>
         </div>
       </div>
     </div>
