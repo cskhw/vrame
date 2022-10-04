@@ -42,3 +42,14 @@
     transform: scale(1);
   }
 }
+
+// lotate
+.rotate-enter-active,
+.rotate-leave-active {
+  transition: rotate 0.5s ease;
+}
+
+.rotate-enter-from,
+.rotate-leave-to {
+  transform: rotate(180deg);
+}

@@ -1,34 +1,37 @@
 <template>
-  <div
-    class="s-list"
-    :style="[_listStyle]"
-    @mouseenter="isHoverList = true"
-    @mouseleave="isHoverList = false"
-    @click="onClickSList"
-  >
-    <div style="margin-right: 0.5rem">
-      <slot name="icon">
-        <s-icon v-if="icon" :icon="icon.icon" :color="listIconColor" />
-      </slot>
-    </div>
-    <div :style="_titleStyle">
-      <slot name="title"></slot>
+  <div class="s-list">
+    <div
+      class="s-list-body"
+      :style="[_listStyle]"
+      @mouseenter="isHoverList = true"
+      @mouseleave="isHoverList = false"
+      @click="onClickSList"
+    >
+      <div style="margin-right: 0.5rem">
+        <slot name="icon">
+          <s-icon v-if="icon" :icon="icon.icon" :color="listIconColor" />
+        </slot>
+      </div>
+      <div :style="_titleStyle">
+        <slot name="title"></slot>
+      </div>
+      <Transition name="fade">
+        <s-icon
+          v-if="children?.length"
+          class="s-list-downicon"
+          :icon="mdiMenuDown"
+        />
+      </Transition>
     </div>
 
-    <s-icon
-      v-if="children?.length"
-      class="s-list-downicon"
-      :icon="mdiMenuDown"
-      @click="isShowChildren = !isShowChildren"
-    />
     <template v-if="isShowChildren">
       <template v-for="child in children" :key="children">
         <s-list
+          style="padding-left: 1rem"
           link
-          to="/sappbar"
-          :icon="{ icon: child.icon, color: 'rgba(0,0,0,0.8)' }"
-          hover-color="blue"
-          :children="[]"
+          :to="child.to"
+          :icon="{ icon: child.icon?.icon, color: child.icon?.color }"
+          :hover-color="child.hoverColor"
           ><template #title>s-appbar</template></s-list
         >
       </template>
@@ -36,6 +39,7 @@
   </div>
 </template>
 <script setup lang="ts">
+import type { TSList } from "@/types/components";
 import { mdiMenuDown } from "@mdi/js";
 import type { CSSProperties } from "vue";
 import { useRouter } from "vue-router";
@@ -99,7 +103,11 @@ const _titleStyle = computed(() => ({
   color: listHoverColor.value,
 }));
 
-function onClickSList() {
+function onClickSList(e: Event) {
+  if (props.children?.length) {
+    e.stopPropagation();
+    isShowChildren.value = !isShowChildren.value;
+  }
   if (props.to) {
     router.push(props.to);
   }

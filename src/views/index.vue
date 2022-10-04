@@ -18,7 +18,7 @@
         to="/sappbar"
         :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)' }"
         hover-color="blue"
-        :children="[]"
+        :children="appbarListChildren"
         ><template #title>s-appbar</template></s-list
       >
       <s-list
@@ -46,7 +46,12 @@
 import type { TSList } from "@/types/components";
 import { mdiListBox } from "@mdi/js";
 
-const drawerChildrens = ref<TSList[]>([{}]);
+const appbarListChildren = ref<TSList[]>([
+  {
+    icon: { icon: mdiListBox, color: "gray" },
+    hoverColor: "blue",
+  },
+]);
 </script>
 <style lang="scss" scoped>
 .body {
