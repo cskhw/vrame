@@ -14,13 +14,28 @@
     <div :style="_titleStyle">
       <slot name="title"></slot>
     </div>
-    fdsa
-    {{ children }}
-    <SIcon v-if="children" class="s-list-downicon" :icon="mdiMenuDown" />
+
+    <s-icon
+      v-if="children?.length"
+      class="s-list-downicon"
+      :icon="mdiMenuDown"
+      @click="isShowChildren = !isShowChildren"
+    />
+    <template v-if="isShowChildren">
+      <template v-for="child in children" :key="children">
+        <s-list
+          link
+          to="/sappbar"
+          :icon="{ icon: child.icon, color: 'rgba(0,0,0,0.8)' }"
+          hover-color="blue"
+          :children="[]"
+          ><template #title>s-appbar</template></s-list
+        >
+      </template>
+    </template>
   </div>
 </template>
 <script setup lang="ts">
-import type { TSList } from "@/types/component";
 import { mdiMenuDown } from "@mdi/js";
 import type { CSSProperties } from "vue";
 import { useRouter } from "vue-router";
@@ -34,10 +49,12 @@ const props = defineProps<{
   hoverBgColor?: string;
   link?: boolean;
   to?: string;
-  children?: () => TSList[];
+  children?: TSList[];
 }>();
 
 const isHoverList = ref(false);
+const isShowChildren = ref(false);
+
 const listHoverBgColor = computed(() => {
   if (props.hoverBgColor) {
     if (isHoverList.value) return props.hoverBgColor;

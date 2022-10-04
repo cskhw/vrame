@@ -19,7 +19,7 @@
         :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)' }"
         hover-color="blue"
         :children="[]"
-        ><template #title>sappbar</template></s-list
+        ><template #title>s-appbar</template></s-list
       >
       <s-list
         link
@@ -43,7 +43,10 @@
   </div>
 </template>
 <script setup lang="ts">
+import type { TSList } from "@/types/components";
 import { mdiListBox } from "@mdi/js";
+
+const drawerChildrens = ref<TSList[]>([{}]);
 </script>
 <style lang="scss" scoped>
 .body {

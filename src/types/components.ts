@@ -1,4 +1,4 @@
-import type { Ref } from "vue";
+import type { CSSProperties, Ref } from "vue";
 
 export interface IIComponentSpinner {
   onSpin: () => void;
