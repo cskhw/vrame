@@ -33,7 +33,7 @@ export interface TSList {
 // STable
 export interface ISTableStyles {
   tableStyle?: CSSProperties;
-  headerStyle?: CSSProperties;
+  tHeaderStyle?: CSSProperties;
   tBodyStyle?: CSSProperties;
   thStyle?: (idx: number) => CSSProperties;
   trStyle?: (idx: number) => CSSProperties;

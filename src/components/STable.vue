@@ -7,7 +7,7 @@
     <!-- header -->
     <div
       class="s-table-header"
-      :style="[tableStyles?.headerStyle || {}]"
+      :style="[tableStyles?.tHeaderStyle || {}]"
       @click="onClickTheader"
     >
       <div
@@ -37,7 +37,10 @@
         <div
           class="s-table-td"
           v-for="(td, _, j) in row"
-          :style="[tableStyles?.tdStyle ? tableStyles.tdStyle(i, j) : {}]"
+          :style="[
+            tableStyles?.tdStyle ? tableStyles.tdStyle(i, j) : {},
+            tableStyles?.columnStyle ? tableStyles.columnStyle(j) : {},
+          ]"
           @click="() => onClickTd(td)"
         >
           <slot name="td" :td="td"><div v-html="td"></div></slot>
