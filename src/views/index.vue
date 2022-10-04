@@ -15,25 +15,10 @@
     <s-drawer
       ><s-list
         link
-        to="/sappbar"
-        :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)' }"
+        :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)', to: '/sappbar' }"
         hover-color="blue"
-        :children="appbarListChildren"
-        ><template #title>s-appbar</template></s-list
-      >
-      <s-list
-        link
-        to="/sdrawer"
-        :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)' }"
-        hover-color="blue"
-        ><template #title>s-drawer</template></s-list
-      >
-      <s-list
-        link
-        to="/slist"
-        :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)' }"
-        hover-color="blue"
-        ><template #title>s-list</template></s-list
+        :children="drawreChildren"
+        ><template #title>components</template></s-list
       >
     </s-drawer>
     <div class="body">
@@ -46,10 +31,27 @@
 import type { TSList } from "@/types/components";
 import { mdiListBox } from "@mdi/js";
 
-const appbarListChildren = ref<TSList[]>([
+const drawreChildren = ref<TSList[]>([
   {
     icon: { icon: mdiListBox, color: "gray" },
     hoverColor: "blue",
+    title: "s-appbar",
+    to: "s-appbar",
+    link: true,
+  },
+  {
+    icon: { icon: mdiListBox, color: "gray" },
+    hoverColor: "blue",
+    title: "s-drawer",
+    to: "s-drawer",
+    link: true,
+  },
+  {
+    icon: { icon: mdiListBox, color: "gray" },
+    hoverColor: "blue",
+    title: "s-list",
+    to: "s-list",
+    link: true,
   },
 ]);
 </script>

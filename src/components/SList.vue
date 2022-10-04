@@ -3,17 +3,19 @@
     <div
       class="s-list-body"
       :style="[_listStyle]"
-      @mouseenter="isHoverList = false"
+      @mouseenter="isHoverList = true"
       @mouseleave="isHoverList = false"
       @click="onClickSList"
     >
+      <!-- icon -->
       <div style="margin-right: 0.5rem">
         <slot name="icon">
           <s-icon v-if="icon" :icon="icon.icon" :color="listIconColor" />
         </slot>
       </div>
+      <!-- title -->
       <div :style="_titleStyle">
-        <slot name="title"></slot>
+        <slot name="title">{{ title }}</slot>
       </div>
       <Transition :name="downIconAnimeName">
         <s-icon
@@ -28,33 +30,38 @@
       <template v-for="child in children" :key="children">
         <s-list
           style="padding-left: 1rem"
-          link
+          :link="child.link"
           :to="child.to"
           :icon="{ icon: child.icon?.icon, color: child.icon?.color }"
           :hover-color="child.hoverColor"
-          ><template #title>s-appbar</template></s-list
+          :children="child.children"
+          @click="onClickSList"
+          ><template #title>{{ child.title }}</template></s-list
         >
       </template>
     </template>
   </div>
 </template>
 <script setup lang="ts">
+import useAppStore from "@/stores/useAppStore";
 import type { TSList } from "@/types/components";
 import { mdiMenuDown, mdiMenuUp } from "@mdi/js";
 import type { CSSProperties } from "vue";
 import { useRouter } from "vue-router";
 
-const router = useRouter();
-
 const props = defineProps<{
   listStyle?: CSSProperties;
   icon?: { icon: string; color: string };
+  title?: string;
   hoverColor?: string;
   hoverBgColor?: string;
   link?: boolean;
   to?: string;
   children?: TSList[];
 }>();
+
+const router = useRouter();
+const appStore = useAppStore();
 
 const isHoverList = ref(false);
 const isShowChildren = ref(false);
@@ -123,7 +130,7 @@ function setDownIcon() {
   isDownIconDown.value = !isDownIconDown.value;
   setTimeout(() => {
     isShowDownIcon.value = true;
-  }, 300);
+  }, 200);
 }
 
 function onClickSList(e: Event) {
@@ -132,6 +139,7 @@ function onClickSList(e: Event) {
     setDownIcon();
   }
   if (props.to) {
+    appStore.isShowDrawer = false;
     router.push(props.to);
   }
 }

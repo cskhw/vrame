@@ -21,6 +21,7 @@ export interface IIComponentSpinner {
 export interface TSList {
   listStyle?: CSSProperties;
   icon?: { icon: string; color: string };
+  title?: string;
   hoverColor?: string;
   hoverBgColor?: string;
   link?: boolean;

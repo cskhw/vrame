@@ -19,17 +19,17 @@ const router = createRouter({
           component: () => import("@/views/index/introduction.vue"),
         },
         {
-          path: "/sappbar",
+          path: "/s-appbar",
           name: "sappbar",
           component: () => import("@/views/index/sappbar.vue"),
         },
         {
-          path: "/sdrawer",
+          path: "/s-drawer",
           name: "sdrawer",
           component: () => import("@/views/index/sdrawer.vue"),
         },
         {
-          path: "/slist",
+          path: "/s-list",
           name: "slist",
           component: () => import("@/views/index/slist.vue"),
         },
