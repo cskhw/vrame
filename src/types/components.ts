@@ -18,6 +18,7 @@ export interface IIComponentSpinner {
   ) => F;
 }
 
+// SList
 export interface TSList {
   listStyle?: CSSProperties;
   icon?: { icon: string; color: string };
@@ -27,4 +28,15 @@ export interface TSList {
   link?: boolean;
   to?: string;
   children?: TSList[];
+}
+
+// STable
+export interface ISTableStyles {
+  tableStyle?: CSSProperties;
+  headerStyle?: CSSProperties;
+  tBodyStyle?: CSSProperties;
+  thStyle?: (idx: number) => CSSProperties;
+  trStyle?: (idx: number) => CSSProperties;
+  columnStyle?: (idx: number) => CSSProperties;
+  tdStyle?: (ridx: number, cidx: number) => CSSProperties;
 }

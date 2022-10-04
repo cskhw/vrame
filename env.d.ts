@@ -1,28 +1,4 @@
 /// <reference types="vite/client" />
-import { Ref, UnwrapRef } from "vue";
-
-declare global {
-  // ref
-  function ref<T extends object>(
-    value: T
-  ): [T] extends [Ref] ? T : Ref<UnwrapRef<T>>;
-  function ref<T>(value: T): Ref<UnwrapRef<T>>;
-  function ref<T = any>(): Ref<T | undefined>;
-
-  // reactive
-  function reactive<T extends object>(target: T): UnwrapNestedRefs<T>;
-
-  // computed
-  function computed<T>(
-    getter: ComputedGetter<T>,
-    debugOptions?: DebuggerOptions
-  ): ComputedRef<T>;
-
-  function computed<T>(
-    options: WritableComputedOptions<T>,
-    debugOptions?: DebuggerOptions
-  ): WritableComputedRef<T>;
-}
 
 // Env
 interface ImportMetaEnv {
@@ -34,5 +10,3 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
-
-export {};

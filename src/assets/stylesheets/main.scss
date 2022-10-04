@@ -46,12 +46,20 @@ body {
   color: $smooth-black;
   font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .sub-title {
   color: $smooth-black;
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.table {
+  border: 1px solid black;
+  .tr {
+  }
+  .td {
+  }
 }

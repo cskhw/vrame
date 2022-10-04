@@ -6,9 +6,19 @@
       the top of the app.
     </p>
 
-    <div class="sub-title" style="margin-bottom: 1rem">props</div>
-    <div class="code">- test</div>
+    <div class="sub-title">props</div>
+    <li class="text-400-20-black">appBarStyle</li>
+    <p class="text-400-20-lightgray"><div>
+      <s-table :headers="headers" :tableSpec="tableColumnSpec"></s-table>
+    </div></p>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { ISTableStyles } from "@/types/components";
+
+const headers = ref(['a', 'b'])
+const tableColumnSpec = computed<ISTableStyles>(() => {
+})
+
+</script>
 <style lang="scss"></style>
