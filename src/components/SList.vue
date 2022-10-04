@@ -19,7 +19,7 @@
 </template>
 <script setup lang="ts">
 import { mdiMenuDown } from "@mdi/js";
-import { CSSProperties } from "vue";
+import type { CSSProperties } from "vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
@@ -34,7 +34,15 @@ type TSList = {
   children?: () => TSList[];
 };
 
-const props = defineProps<TSList>();
+const props = defineProps<{
+  listStyle?: CSSProperties;
+  icon?: { icon: string; color: string };
+  hoverColor?: string;
+  hoverBgColor?: string;
+  link?: boolean;
+  to?: string;
+  children?: () => TSList[];
+}>();
 
 const isHoverList = ref(false);
 const listHoverBgColor = computed(() => {

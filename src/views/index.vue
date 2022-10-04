@@ -18,21 +18,21 @@
         to="/sappbar"
         :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)' }"
         hover-color="blue"
-        ><template #title>sappbar</template></s-list
+        ><template #title>s-appbar</template></s-list
       >
       <s-list
         link
         to="/sdrawer"
         :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)' }"
         hover-color="blue"
-        ><template #title>sdrawer</template></s-list
+        ><template #title>s-drawer</template></s-list
       >
       <s-list
         link
         to="/slist"
         :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)' }"
         hover-color="blue"
-        ><template #title>slist</template></s-list
+        ><template #title>s-list</template></s-list
       >
     </s-drawer>
     <div class="body">

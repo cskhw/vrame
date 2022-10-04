@@ -1,4 +1,4 @@
 <template>
-  <div>sdrawer</div>
+  <div>s-drawer</div>
 </template>
 <script setup lang="ts"></script>

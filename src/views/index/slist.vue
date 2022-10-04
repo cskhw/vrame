@@ -1,4 +1,4 @@
 <template>
-  <div>slist</div>
+  <div>s-list</div>
 </template>
 <script setup lang="ts"></script>

@@ -10,7 +10,7 @@
 </template>
 <script setup lang="ts">
 import useAppStore from "@/stores/useAppStore";
-import { computed, CSSProperties, Transition } from "vue";
+import { computed, type CSSProperties } from "vue";
 
 const appStore = useAppStore();
 
