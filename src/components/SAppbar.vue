@@ -26,7 +26,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed, CSSProperties } from "vue";
+import { computed, type CSSProperties } from "vue";
 import { mdiReorderHorizontal } from "@mdi/js";
 import useAppStore from "@/stores/useAppStore";
 import colors from "@/utils/colors";
