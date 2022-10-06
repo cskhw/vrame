@@ -1,3 +1,7 @@
+html {
+  padding-top: 80px;
+}
+
 .s-app-bar {
   transition: all 0.3s ease-in-out;
 
@@ -7,9 +11,10 @@
   justify-content: flex-start;
   align-items: center;
 
+  position: fixed;
+
   padding: 1rem;
 
-  position: relative;
   width: calc(100% - 2rem);
   height: 2rem;
   background-color: white;

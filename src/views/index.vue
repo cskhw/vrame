@@ -35,9 +35,9 @@
         ><template #title>components</template></s-list
       >
     </s-drawer>
-    <div class="body">
+    <s-main>
       <router-view></router-view>
-    </div>
+    </s-main>
     <!-- drawer -->
   </div>
 </template>

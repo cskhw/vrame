@@ -46,7 +46,7 @@ body {
   color: $smooth-black;
   font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 
 .sub-title {
@@ -54,12 +54,4 @@ body {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
-}
-
-.table {
-  border: 1px solid black;
-  .tr {
-  }
-  .td {
-  }
 }
