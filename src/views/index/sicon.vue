@@ -1,9 +1,8 @@
 <template>
   <div class="components-body">
-    <div class="title">s-appbar</div>
+    <div class="title">s-icon</div>
     <p class="text-400-20-lightgray">
-      The <code class="text-bold-20-black">s-appbar</code> component is fixed to
-      the top of the app.
+      The <code class="text-bold-20-black">s-icon</code> component display svg(etc. @mdi/js...) icon.
     </p>
 
     <div class="sub-title">props</div>
@@ -30,26 +29,29 @@ import type { ISTableStyles } from "@/types/components";
 const headers = ref(["name", "type", "description"]);
 const tableItems = ref<IpropsTable[]>([
   {
-    name: "appBarStyle",
-    type: "CSSProperties | boolean | undefined",
-    desc: "Define s-appbar's style",
+    name: "icon",
+    type: "string",
+    desc: "Icon's path string.",
   },
   {
-    name: "drawerIcon",
-    type: "string | boolean | undefined",
-    desc: `If drawerIcon's type is boolean, on/off display the default icon that on/off drawer.<br/>
-    If drawerIcons'type is string, display the user icon that in/off drawer.
-    `,
+    name: "color",
+    type: "string?",
+    desc: `Icon's color.`,
   },
   {
-    name: "shadow",
-    type: "string | boolean | undefined",
-    desc: `If shadow's type is string, display user shadow.<br/> If shadow's type is boolean, on/off display the default shadow.`,
+    name: "iconStyle",
+    type: "CSSProperties?",
+    desc: `s-icon's user style.`,
   },
   {
-    name: "border",
-    type: "string | boolean | undefined",
-    desc: `If border's type is string, display user border.<br/> If border's type is boolean, on/off display the default border.`,
+    name: "link",
+    type: "boolean?",
+    desc: `If link is true, s-icon's cursor will change to pointer.`,
+  },
+  {
+    name: "viewBox",
+    type: "string?",
+    desc: `Control svg tag's viewBox. if you don't know what is viewBox, please refer to the follwing site. <a href="https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/viewBox"><br/>mdn (viewBox)</a>`,
   },
 ]);
 const tableColumnSpec = computed<ISTableStyles>(
