@@ -30,26 +30,24 @@ import type { ISTableStyles } from "@/types/components";
 const headers = ref(["name", "type", "description"]);
 const tableItems = ref<IpropsTable[]>([
   {
-    name: "appBarStyle",
-    type: "CSSProperties | boolean | undefined",
+    name: "appBarStyle?",
+    type: "CSSProperties | boolean",
     desc: "Define s-appbar's style",
   },
   {
-    name: "drawerIcon",
-    type: "string | boolean | undefined",
-    desc: `If drawerIcon's type is boolean, on/off display the default icon that on/off drawer.<br/>
-    If drawerIcons'type is string, display the user icon that in/off drawer.
-    `,
+    name: "drawerIcon?",
+    type: "string | boolean",
+    desc: `If drawerIcons'type is string, display the user icon that in/off drawer.<br/>If drawerIcon's type is boolean, on/off display the default icon that on/off drawer.`,
   },
   {
-    name: "shadow",
-    type: "string | boolean | undefined",
-    desc: `If shadow's type is string, display user shadow.<br/> If shadow's type is boolean, on/off display the default shadow.`,
+    name: "shadow?",
+    type: "string | boolean",
+    desc: `If shadow's type is string, display user shadow.`,
   },
   {
-    name: "border",
-    type: "string | boolean | undefined",
-    desc: `If border's type is string, display user border.<br/> If border's type is boolean, on/off display the default border.`,
+    name: "border?",
+    type: "string | boolean",
+    desc: `If border's type is string, display user border.`,
   },
 ]);
 const tableColumnSpec = computed<ISTableStyles>(
