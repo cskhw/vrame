@@ -1,8 +1,9 @@
 <template>
   <div class="components-body">
-    <div class="title">s-drawer</div>
+    <div class="title">s-appbar</div>
     <p class="text-400-20-lightgray">
-      The <code class="text-bold-20-black">s-drawer</code> component is the sidebar on application's left.
+      The <code class="text-bold-20-black">s-appbar</code> component is fixed to
+      the top of the app.
     </p>
 
     <div class="sub-title">props</div>
@@ -29,14 +30,16 @@ import type { ISTableStyles } from "@/types/components";
 const headers = ref(["name", "type", "description"]);
 const tableItems = ref<IpropsTable[]>([
   {
-    name: "modelValue",
-    type: "boolean",
-    desc: "Turn On/Off drawer.",
-  },
-  {
-    name: "drawerStyle",
+    name: "appBarStyle",
     type: "CSSProperties | boolean | undefined",
     desc: "Define s-appbar's style",
+  },
+  {
+    name: "drawerIcon",
+    type: "string | boolean | undefined",
+    desc: `If drawerIcon's type is boolean, on/off display the default icon that on/off drawer.<br/>
+    If drawerIcons'type is string, display the user icon that in/off drawer.
+    `,
   },
   {
     name: "shadow",
@@ -86,7 +89,6 @@ const tableColumnSpec = computed<ISTableStyles>(
             width: "20%",
           };
         else if (i == 2)
-
           return {
             width: "60%",
           };

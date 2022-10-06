@@ -12,7 +12,7 @@
         ><img class="pt-btn" src="@/assets/images/simplipy.png" width="60" />
       </s-btn>
     </s-appbar>
-    <s-drawer>
+    <s-drawer v-model="isDrawer">
       <s-list
         link
         to="introduction"
@@ -45,6 +45,8 @@
 import type { TSList } from "@/types/components";
 import { mdiListBox } from "@mdi/js";
 
+const isDrawer = ref(false);
+
 const drawreChildren = ref<TSList[]>([
   {
     icon: { icon: mdiListBox, color: "gray" },
@@ -65,6 +67,27 @@ const drawreChildren = ref<TSList[]>([
     hoverColor: "blue",
     title: "s-list",
     to: "s-list",
+    link: true,
+  },
+  {
+    icon: { icon: mdiListBox, color: "gray" },
+    hoverColor: "blue",
+    title: "s-icon",
+    to: "s-icon",
+    link: true,
+  },
+  {
+    icon: { icon: mdiListBox, color: "gray" },
+    hoverColor: "blue",
+    title: "s-table",
+    to: "s-table",
+    link: true,
+  },
+  {
+    icon: { icon: mdiListBox, color: "gray" },
+    hoverColor: "blue",
+    title: "s-select",
+    to: "s-select",
     link: true,
   },
 ]);

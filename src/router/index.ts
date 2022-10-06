@@ -38,6 +38,21 @@ const router = createRouter({
           name: "slist",
           component: () => import("@/views/index/slist.vue"),
         },
+        {
+          path: "/s-icon",
+          name: "sicon",
+          component: () => import("@/views/index/sicon.vue"),
+        },
+        {
+          path: "/s-table",
+          name: "stable",
+          component: () => import("@/views/index/stable.vue"),
+        },
+        {
+          path: "/s-select",
+          name: "sselect",
+          component: () => import("@/views/index/sselect.vue"),
+        },
       ],
     },
   ],

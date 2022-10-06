@@ -17,8 +17,8 @@ const appStore = useAppStore();
 const props = defineProps<{
   modelValue?: boolean;
   drawerStyle?: CSSProperties;
-  border?: string;
   shadow?: string;
+  border?: string;
 }>();
 
 const emit = defineEmits(["update:modelValue"]);
