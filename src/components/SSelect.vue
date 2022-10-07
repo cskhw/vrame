@@ -1,10 +1,11 @@
 <template>
   {{ isShowOptions }}
-  <div class="s-select" :style="[__selectStyle]" @mousedown.stop>
+  <div class="s-select" :style="[__selectStyle]">
     <!-- for control select's display -->
     <input
-      type="text"
+      class="hidden-input"
       ref="hiddenInput"
+      type="text"
       @focus="focusFunction"
       @blur="blurFunction"
     />
@@ -12,23 +13,35 @@
     <div
       class="s-select-value"
       :style="[_selectValueStyle]"
-      @mousedown.stop
+      @mousedown.prevent
       @click.stop="onClickSelect"
     >
+      <!-- select-value-slot -->
       <slot name="value" :value="modelValue">
         <div v-html="modelValue.text"></div>
       </slot>
     </div>
     <!-- select-options -->
-    <div v-show="isShowOptions" class="s-options" :style="[_optionsStyle]">
+    <div
+      class="s-select-options"
+      :style="[
+        _optionsStyle,
+        // set disabled style
+        isShowOptions ? {} : { visibility: 'hidden' },
+      ]"
+    >
+      <!-- select-option -->
       <div
+        class="s-select-option"
         v-for="(option, i) of options"
-        class="s-option"
-        :style="[_optionStyle]"
         :key="i"
         @mousedown="() => onMouseDownOption(option)"
+        :style="[_optionStyle]"
       >
-        {{ option.text }}
+        <!-- select-option-slot -->
+        <slot name="option" :option="option" :idx="i">
+          <div v-html="option.text"></div>
+        </slot>
       </div>
     </div>
   </div>
@@ -47,6 +60,9 @@ const props = defineProps<{
   optionStyle?: CSSProperties;
   disabled?: boolean;
   disabledStyle?: CSSProperties;
+  selectHoverColor?: string;
+  optionHoverColor?: string;
+  maxOptionHeight?: string;
 }>();
 
 const emit = defineEmits(["update:modelValue"]);
@@ -57,7 +73,7 @@ const isShowOptions = ref(false);
 
 const __selectStyle = computed(() => ({
   ...props.selectStyle,
-  ...(props.disabled ? props.disabledStyle : {}),
+  ...(props.disabled ? _disabledStyle.value : {}),
 }));
 
 const _selectValueStyle = computed(() => ({
@@ -81,22 +97,13 @@ const _disabledStyle = computed(() => ({
 }));
 
 /**event handler function */
-const focusFunction = () => {
-  console.log("focus");
-  isShowOptions.value = true;
-};
-const blurFunction = () => {
-  console.log("blur");
-  isShowOptions.value = false;
-};
+const focusFunction = () => (isShowOptions.value = true);
+const blurFunction = () => (isShowOptions.value = false);
 
 function onClickSelect() {
   if (props.disabled) return;
-  console.log(hiddenInput.value, document.activeElement);
   if (hiddenInput.value === document.activeElement) hiddenInput.value.blur();
-  else {
-    hiddenInput.value?.focus();
-  }
+  else hiddenInput.value?.focus();
 }
 
 function onMouseDownOption(option: TValue) {
@@ -104,26 +111,37 @@ function onMouseDownOption(option: TValue) {
   emit("update:modelValue", option);
   isShowOptions.value = false;
 }
-
-// watch(props, (newValue) => {
-//   emit("update:modelValue", newValue.modelValue);
-// });
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/stylesheets/colors.scss";
 .s-select {
+  position: relative;
+  width: max-content;
   cursor: pointer;
+  position: relative;
   .s-select-value {
-    outline: 1px solid $border-color;
-    border-radius: 4px;
     padding: 8px 12px;
-  }
-  .s-options {
-    outline: 1px solid $border-color;
     border-radius: 4px;
-    .s-option {
+    outline: 1px solid $border-color;
+  }
+  .s-select-options {
+    height: 0;
+    border-radius: 4px;
+    background-color: white;
+
+    .s-select-option {
+      background-color: white;
       padding: 8px 12px;
+      border-left: 1px solid $border-color;
+      border-right: 1px solid $border-color;
+      &:first-child {
+        border-radius: 4px 4px 0 0;
+      }
+      &:last-child {
+        border-bottom: 1px solid $border-color;
+        border-radius: 0 0 4px 4px;
+      }
     }
   }
 }

@@ -7,7 +7,9 @@
     fdsa
     
     <s-select v-model="value" :options="selectOptions">
-      
+      <template #value="{}">
+
+      </template>
     </s-select>
 
     <div class="sub-title">props</div>
