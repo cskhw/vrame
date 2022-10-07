@@ -40,3 +40,8 @@ export interface ISTableStyles {
   columnStyle?: (idx: number) => CSSProperties;
   tdStyle?: (ridx: number, cidx: number) => CSSProperties;
 }
+
+export interface TValue {
+  text: string;
+  value: any;
+}

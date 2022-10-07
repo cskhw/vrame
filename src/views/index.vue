@@ -90,6 +90,20 @@ const drawreChildren = ref<TSList[]>([
     to: "s-select",
     link: true,
   },
+  {
+    icon: { icon: mdiListBox, color: "gray" },
+    hoverColor: "blue",
+    title: "s-select",
+    to: "s-select",
+    link: true,
+  },
+  {
+    icon: { icon: mdiListBox, color: "gray" },
+    hoverColor: "blue",
+    title: "s-select",
+    to: "s-select",
+    link: true,
+  },
 ]);
 </script>
 <style lang="scss" scoped></style>

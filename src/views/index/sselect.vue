@@ -1,9 +1,14 @@
 <template>
   <div class="components-body">
-    <div class="title">s-table</div>
+    <div class="title">s-select</div>
     <p class="text-400-20-lightgray">
-      The <code class="text-bold-20-black">s-table</code> component is ui frame like html's table, th, tr... tags. You can put in styles freely via to props.
+      The <code class="text-bold-20-black">s-select</code> component is ui frame like html's select, option.
     </p>
+    fdsa
+    
+    <s-select v-model="value" :options="selectOptions">
+      
+    </s-select>
 
     <div class="sub-title">props</div>
     <s-table
@@ -27,12 +32,33 @@ import type { IpropsTable } from "@/types";
 import type { ISTableStyles } from "@/types/components";
 import { descriptionTableStyles } from "@/utils/common";
 
+const value = ref({
+  text: 'hello', 
+  value: 'test'
+})
+
+const selectOptions = ref([
+  {
+    text: 'fdsafdsfdsafdsafsdfsa', 
+    value:'t1'
+  },
+  {
+    text: 'fdsa', 
+    value:'t2'
+  },
+  {
+    text: 'fdsafdsa', 
+    value:'t3'
+  },
+])
+
+
 const headers = ref(["name", "type", "description"]);
 const tableItems = ref<IpropsTable[]>([
   {
     name: "appBarStyle",
     type: "CSSProperties | boolean | undefined",
-    desc: "Define s-appbar's style",
+  desc: "Define s-appbar's style",
   },
   {
     name: "drawerIcon",

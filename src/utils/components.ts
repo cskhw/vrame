@@ -5,6 +5,7 @@ import SBtn from "@/components/SBtn.vue";
 import SIcon from "@/components/SIcon.vue";
 import STable from "@/components/STable.vue";
 import SMain from "@/components/SMain.vue";
+import SSelect from "@/components/SSelect.vue";
 
 export default [
   { name: "s-appbar", component: SAppbar },
@@ -14,4 +15,5 @@ export default [
   { name: "s-btn", component: SBtn },
   { name: "s-icon", component: SIcon },
   { name: "s-table", component: STable },
+  { name: "s-select", component: SSelect },
 ];

@@ -59,7 +59,6 @@ onMounted(() => {
     parseInt(paddingTop.substring(0, 2)) +
     parseInt(height.substring(0, 2)) +
     parseInt(paddingBottom.substring(0, 2));
-  console.log(appbarHeight);
   const sMain = document.getElementById("s-main");
   if (height && sMain) sMain.style.paddingTop = appbarHeight + "px";
 });
