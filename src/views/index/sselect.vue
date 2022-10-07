@@ -1,9 +1,8 @@
 <template>
   <div class="components-body">
-    <div class="title">s-appbar</div>
+    <div class="title">s-table</div>
     <p class="text-400-20-lightgray">
-      The <code class="text-bold-20-black">s-appbar</code> component is fixed to
-      the top of the app.
+      The <code class="text-bold-20-black">s-table</code> component is ui frame like html's table, th, tr... tags. You can put in styles freely via to props.
     </p>
 
     <div class="sub-title">props</div>
@@ -26,6 +25,7 @@
 <script setup lang="ts">
 import type { IpropsTable } from "@/types";
 import type { ISTableStyles } from "@/types/components";
+import { descriptionTableStyles } from "@/utils/common";
 
 const headers = ref(["name", "type", "description"]);
 const tableItems = ref<IpropsTable[]>([
@@ -52,48 +52,6 @@ const tableItems = ref<IpropsTable[]>([
     desc: `If border's type is string, display user border.<br/> If border's type is boolean, on/off display the default border.`,
   },
 ]);
-const tableColumnSpec = computed<ISTableStyles>(
-  () =>
-    ({
-      tableStyle: {
-        width: "100%",
-      },
-      tBodyStyle: {
-        width: "100%",
-      },
-      tHeaderStyle: {
-        width: "100%",
-        backgroundColor: "#eeeeee",
-      },
-      thStyle(i: number) {
-        if (i == 0)
-          return {
-            width: "20%",
-          };
-        else if (i == 1)
-          return {
-            width: "20%",
-          };
-        else if (i == 2)
-          return {
-            width: "60%",
-          };
-      },
-      columnStyle(i: number) {
-        if (i == 0)
-          return {
-            width: "20%",
-          };
-        else if (i == 1)
-          return {
-            width: "20%",
-          };
-        else if (i == 2)
-          return {
-            width: "60%",
-          };
-      },
-    } as ISTableStyles)
-);
+const tableColumnSpec = descriptionTableStyles
 </script>
 <style lang="scss"></style>

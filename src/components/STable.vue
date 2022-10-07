@@ -59,9 +59,9 @@ import type { ISTableStyles } from "@/types/components";
 
 // props 데이터 없을 때 초기값 설정
 const props = defineProps<{
-  headers: any[];
+  headers: string[];
   modelValue: { [key: string]: any }[];
-  tableStyles: ISTableStyles;
+  tableStyles?: ISTableStyles;
 }>();
 
 // emits
@@ -69,7 +69,7 @@ const emit = defineEmits<{
   (e: "clickTable", items: { [key: string]: any }[]): void;
   (e: "clickTheader", headers: any[]): void;
   (e: "clickTh", item: any): void;
-  (e: "clickTBody", item: any): void;
+  (e: "clickTbody", item: any): void;
   (e: "clickTr", item: any): void;
   (e: "clickTd", item: any): void;
   (e: "update:modelValue", modelValue: any): void;
@@ -88,7 +88,7 @@ const onClickTh = (header: any) => {
 };
 
 const onClickTBody = () => {
-  emit("clickTBody", props.modelValue);
+  emit("clickTbody", props.modelValue);
 };
 
 const onClickTr = (row: any) => {

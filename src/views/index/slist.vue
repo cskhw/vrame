@@ -25,6 +25,7 @@
 <script setup lang="ts">
 import type { IpropsTable } from "@/types";
 import type { ISTableStyles } from "@/types/components";
+import { descriptionTableStyles } from "@/utils/common";
 
 const headers = ref(["name", "type", "description"]);
 const tableItems = ref<IpropsTable[]>([
@@ -69,49 +70,6 @@ const tableItems = ref<IpropsTable[]>([
     desc: `Children can have one or more child that has v-list's props type. If v-list has one or more child, downIcon will display v-list's right side.`,
   },
 ]);
-const tableColumnSpec = computed<ISTableStyles>(
-  () =>
-    ({
-      tableStyle: {
-        width: "100%",
-      },
-      tBodyStyle: {
-        width: "100%",
-      },
-      tHeaderStyle: {
-        width: "100%",
-        backgroundColor: "#eeeeee",
-      },
-      thStyle(i: number) {
-        if (i == 0)
-          return {
-            width: "20%",
-          };
-        else if (i == 1)
-          return {
-            width: "20%",
-          };
-        else if (i == 2)
-          return {
-            width: "60%",
-          };
-      },
-      columnStyle(i: number) {
-        if (i == 0)
-          return {
-            width: "20%",
-          };
-        else if (i == 1)
-          return {
-            width: "20%",
-          };
-        else if (i == 2)
-
-          return {
-            width: "60%",
-          };
-      },
-    } as ISTableStyles)
-);
+const tableColumnSpec = descriptionTableStyles
 </script>
 <style lang="scss"></style>
