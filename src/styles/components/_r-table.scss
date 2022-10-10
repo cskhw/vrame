@@ -1,0 +1,39 @@
+@import "@/styles/colors.scss";
+
+.r-table {
+  display: flex;
+  flex-direction: column;
+
+  width: max-content;
+
+  outline: 1px solid $r-table-border;
+  border-radius: 0.25rem;
+  .r-table-header {
+    display: flex;
+    width: max-content;
+    .r-table-th {
+      padding: 0.5rem 0.75rem;
+      border-right: 1px solid $r-table-border;
+      border-bottom: 1px solid $r-table-border;
+    }
+    .r-table-th:last-child {
+      border-right: none;
+    }
+  }
+  .r-table-body {
+    .r-table-tr {
+      display: flex;
+      border-bottom: 1px solid $r-table-border;
+      .r-table-td {
+        padding: 0.5rem 0.75rem;
+        border-right: 1px solid $r-table-border;
+      }
+      .r-table-td:last-child {
+        border-right: none;
+      }
+    }
+    .r-table-tr:last-child {
+      border-bottom: none;
+    }
+  }
+}

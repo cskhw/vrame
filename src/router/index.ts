@@ -26,32 +26,32 @@ const router = createRouter({
         {
           path: "/s-appbar",
           name: "sappbar",
-          component: () => import("@/views/index/sappbar.vue"),
+          component: () => import("@/views/index/rappbar.vue"),
         },
         {
           path: "/s-drawer",
           name: "sdrawer",
-          component: () => import("@/views/index/sdrawer.vue"),
+          component: () => import("@/views/index/rdrawer.vue"),
         },
         {
           path: "/s-list",
           name: "slist",
-          component: () => import("@/views/index/slist.vue"),
+          component: () => import("@/views/index/rlist.vue"),
         },
         {
           path: "/s-icon",
           name: "sicon",
-          component: () => import("@/views/index/sicon.vue"),
+          component: () => import("@/views/index/ricon.vue"),
         },
         {
           path: "/s-table",
           name: "stable",
-          component: () => import("@/views/index/stable.vue"),
+          component: () => import("@/views/index/rtable.vue"),
         },
         {
           path: "/s-select",
           name: "sselect",
-          component: () => import("@/views/index/sselect.vue"),
+          component: () => import("@/views/index/rselect.vue"),
         },
       ],
     },

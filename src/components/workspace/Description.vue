@@ -2199,7 +2199,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/draft/text";
+@import "@/styles/draft/text";
 
 ::v-deep(.tox .tox-editor-header) {
   z-index: 0 !important;

@@ -850,7 +850,7 @@ watch(refreshDrawings, async () => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/draft/text";
+@import "@/styles/draft/text";
 .drawings {
   position: relative;
   background-color: white;

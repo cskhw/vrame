@@ -561,7 +561,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-@import "@/assets/stylesheets/draft/text";
+@import "@/styles/draft/text";
 
 .workspace-header {
   width: 100%;

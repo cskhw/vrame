@@ -2745,7 +2745,7 @@ watch(showNumber, () => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/draft/text";
+@import "@/styles/draft/text";
 
 .claims {
   position: relative;

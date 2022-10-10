@@ -1,0 +1,73 @@
+@import "@/styles/colors";
+
+$start: 0;
+$end: 60;
+
+@for $i from $start through $end {
+  .text-bold-#{$i}-black {
+    font-weight: bold;
+    font-size: calc($i * 0.0625) + rem;
+    color: black;
+  }
+  .text-500-#{$i}-black {
+    color: black;
+    font-weight: 500;
+    font-size: calc($i * 0.0625) + rem;
+  }
+  .text-400-#{$i}-black {
+    color: black;
+    font-weight: 400;
+    font-size: calc($i * 0.0625) + rem;
+  }
+  .text-bold-#{$i}-lightgray {
+    color: gray;
+    font-weight: bold;
+    font-size: calc($i * 0.0625) + rem;
+  }
+  .text-500-#{$i}-lightgray {
+    color: $light-gray;
+    font-weight: 500;
+    font-size: calc($i * 0.0625) + rem;
+  }
+  .text-400-#{$i}-lightgray {
+    color: $light-gray;
+    font-weight: 400;
+    font-size: calc($i * 0.0625) + rem;
+  }
+  .text-300-#{$i}-lightgray {
+    color: $light-gray;
+    font-weight: 300;
+    font-size: calc($i * 0.0625) + rem;
+  }
+
+  .text-bold-#{$i}-gray {
+    color: gray;
+    font-weight: bold;
+    font-size: calc($i * 0.0625) + rem;
+  }
+  .text-500-#{$i}-gray {
+    color: gray;
+    font-weight: 500;
+    font-size: calc($i * 0.0625) + rem;
+  }
+  .text-400-#{$i}-gray {
+    color: gray;
+    font-weight: 400;
+    font-size: calc($i * 0.0625) + rem;
+  }
+  .text-bold-#{$i}-white {
+    color: white;
+    font-weight: bold;
+    font-size: calc($i * 0.0625) + rem;
+  }
+  .text-500-#{$i}-white {
+    color: white;
+    font-weight: 500;
+    font-size: calc($i * 0.0625) + rem;
+  }
+  .text-400-#{$i}-white {
+    color: white;
+    font-weight: 400;
+    font-size: calc($i * 0.0625) + rem;
+  }
+}

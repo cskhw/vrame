@@ -205,7 +205,7 @@ defineExpose({ isOpen, show, hide });
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/draft/text";
+@import "@/styles/draft/text";
 .modal-wrapper {
   position: fixed;
   z-index: 9999;

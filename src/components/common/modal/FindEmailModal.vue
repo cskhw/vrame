@@ -795,10 +795,10 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/login_outsourcing.scss";
-@import "@/assets/stylesheets/resetPassword_outsourcing.scss";
-@import "@/assets/stylesheets/global_outsourcing.scss";
-@import "@/assets/stylesheets/breakpoint";
+@import "@/styles/login_outsourcing.scss";
+@import "@/styles/resetPassword_outsourcing.scss";
+@import "@/styles/global_outsourcing.scss";
+@import "@/styles/breakpoint";
 .modal {
   z-index: 1001;
 }

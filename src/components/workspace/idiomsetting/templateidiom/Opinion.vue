@@ -42,7 +42,7 @@ const addTextFieldValue = ref("");
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/draft/text";
+@import "@/styles/draft/text";
 .ps-lt {
   position: absolute;
   top: 6rem;

@@ -98,8 +98,8 @@ watch(startDate, (newValue, _) => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/draft/color";
-@import "@/assets/stylesheets/main";
+@import "@/styles/draft/color";
+@import "@/styles/main";
 
 .multi-buttons .v-btn {
   border: 0.0625rem solid #e0e0e0;

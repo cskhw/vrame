@@ -36,5 +36,5 @@
 import { mdiGithub, mdiSimpleIcons } from "@mdi/js";
 </script>
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/views/index";
+@import "@/styles/views/index";
 </style>

@@ -3,8 +3,8 @@
 </template>
 
 <style lang="scss" scoped>
-// @import "@/assets/stylesheets/login.scss";
-@import "@/assets/stylesheets/signUp_outsourcing.scss";
+// @import "@/styles/login.scss";
+@import "@/styles/signUp_outsourcing.scss";
 </style>
 
 <script lang="ts" setup>

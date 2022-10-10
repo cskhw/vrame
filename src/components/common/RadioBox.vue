@@ -69,7 +69,7 @@ watch(props, (newValue) => {
 });
 </script>
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/draft/text";
+@import "@/styles/draft/text";
 .common-radio-box {
   &-icon {
     width: "max-content";

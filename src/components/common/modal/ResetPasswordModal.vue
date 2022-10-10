@@ -350,9 +350,9 @@ watch(formData.value, (newValue, oldValue) => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/login_outsourcing.scss";
-@import "@/assets/stylesheets/resetPassword_outsourcing.scss";
-@import "@/assets/stylesheets/global_outsourcing.scss";
+@import "@/styles/login_outsourcing.scss";
+@import "@/styles/resetPassword_outsourcing.scss";
+@import "@/styles/global_outsourcing.scss";
 
 .modal-content {
   overflow: visible;

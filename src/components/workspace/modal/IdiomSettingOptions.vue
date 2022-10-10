@@ -1278,7 +1278,7 @@ const handleAutocompleteEnter = (editor: any) => {
 </script>
 
 <style lang="scss" scoped>
-@import "src/assets/stylesheets/draft/envsettings";
+@import "src/styles/draft/envsettings";
 .idiom-setting-options {
   height: 100%;
   .auto-save-idiom {

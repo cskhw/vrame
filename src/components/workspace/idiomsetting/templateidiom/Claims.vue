@@ -52,7 +52,7 @@ const addTextFieldValue = ref("");
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/draft/text";
+@import "@/styles/draft/text";
 .template-idiom-claims {
   overflow-x: auto;
 }

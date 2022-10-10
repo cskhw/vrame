@@ -1,0 +1,19 @@
+@import "@/styles/transition";
+
+.r-list {
+  .r-list-body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 0 0.5rem;
+
+    position: relative;
+    height: 32px;
+    border-radius: 8px;
+    .r-list-downicon {
+      position: absolute;
+      right: 0;
+    }
+  }
+}

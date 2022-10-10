@@ -1604,8 +1604,8 @@ onMounted(() => {
 });
 </script>
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/draft/text";
-@import "@/assets/stylesheets/colors";
+@import "@/styles/draft/text";
+@import "@/styles/colors";
 .workspace-toolbar {
   overflow: visible;
   width: 100%;

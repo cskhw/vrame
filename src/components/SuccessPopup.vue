@@ -11,8 +11,8 @@
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/login_outsourcing.scss";
-@import "@/assets/stylesheets/resetPassword_outsourcing.scss";
+@import "@/styles/login_outsourcing.scss";
+@import "@/styles/resetPassword_outsourcing.scss";
 </style>
 
 <script>

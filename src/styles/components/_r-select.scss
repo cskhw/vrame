@@ -1,0 +1,31 @@
+@import "@/styles/colors.scss";
+.r-select {
+  position: relative;
+  width: max-content;
+  cursor: pointer;
+  position: relative;
+  .r-select-value {
+    padding: 8px 12px;
+    border-radius: 4px;
+    outline: 1px solid $border-color;
+  }
+  .r-select-options {
+    height: 0;
+    border-radius: 4px;
+    background-color: white;
+
+    .r-select-option {
+      background-color: white;
+      padding: 8px 12px;
+      border-left: 1px solid $border-color;
+      border-right: 1px solid $border-color;
+      &:first-child {
+        border-radius: 4px 4px 0 0;
+      }
+      &:last-child {
+        border-bottom: 1px solid $border-color;
+        border-radius: 0 0 4px 4px;
+      }
+    }
+  }
+}

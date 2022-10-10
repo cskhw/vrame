@@ -212,7 +212,7 @@ if (appStore.lang === "EN") widthUnit.value = 12;
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/draft/text";
+@import "@/styles/draft/text";
 .modal-wrapper {
   z-index: 999999999999999 !important;
   display: grid;

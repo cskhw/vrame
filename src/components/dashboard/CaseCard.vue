@@ -294,7 +294,7 @@ onMounted(async () => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/draft/text";
+@import "@/styles/draft/text";
 
 .casecard {
   overflow: hidden;

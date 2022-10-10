@@ -1,0 +1,12 @@
+.r-btn {
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.5rem 2rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.15s ease-in-out;
+}

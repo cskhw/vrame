@@ -174,5 +174,5 @@ watchEffect(() => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/signUp_outsourcing.scss";
+@import "@/styles/signUp_outsourcing.scss";
 </style>

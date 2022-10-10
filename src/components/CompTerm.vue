@@ -45,7 +45,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/stylesheets/term_outsourcing.scss";
+@import "@/styles/term_outsourcing.scss";
 </style>
 
 <script>

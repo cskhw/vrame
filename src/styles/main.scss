@@ -1,0 +1,71 @@
+@import "./text";
+@import "./breakpoints";
+@import "./components/r-appbar";
+@import "./components/r-drawer";
+@import "./components/r-main";
+@import "./components/r-list";
+@import "./components/r-btn";
+@import "./components/r-select";
+@import "./components/r-table";
+
+body {
+  margin: 0;
+}
+
+.pt-btn:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.code {
+  width: calc(100% - 2rem);
+
+  padding: 1rem;
+
+  background-color: #eeeeee;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.25rem;
+
+  color: #666666;
+}
+
+.body {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.components-body {
+  width: 50rem;
+
+  @media only screen and (max-width: $notebook) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    width: 18rem;
+  }
+}
+
+.title {
+  color: $smooth-black;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 2rem;
+}
+
+.sub-title {
+  color: $smooth-black;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.hidden-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  outline: none;
+  border: none;
+}
