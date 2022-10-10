@@ -2,6 +2,16 @@
   <div class="main">
     <!-- appbar -->
     <s-appbar drawerIcon>
+      <div style="width: 40px; height: 40px">
+        <s-icon
+          link
+          :iconStyle="{ width: '2rem', height: '2rem' }"
+          viewBox="0 0 16 16"
+          :icon="mdiReorderHorizontal"
+          @click="isDrawer = !isDrawer"
+        >
+        </s-icon>
+      </div>
       <s-btn
         to="/"
         :style="{
@@ -43,7 +53,7 @@
 </template>
 <script setup lang="ts">
 import type { TSList } from "@/types/components";
-import { mdiListBox } from "@mdi/js";
+import { mdiListBox, mdiReorderHorizontal } from "@mdi/js";
 
 const isDrawer = ref(false);
 
