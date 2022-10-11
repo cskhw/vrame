@@ -13,13 +13,13 @@
     </s-select>
 
     <div class="sub-title">props</div>
-    <s-table
+    <r-table
     style="margin-bottom: 3rem"
       v-model="tableItems"
       :headers="headers"
       :tableStyles="tableColumnSpec"
     >
-    </s-table>
+    </r-table>
 
     <div class="sub-title">Usage</div>
     <p class="text-400-20-lightgray">

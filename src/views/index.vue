@@ -1,18 +1,18 @@
 <template>
   <div class="main">
     <!-- appbar -->
-    <s-appbar>
+    <r-appbar>
       <div style="width: 40px; height: 40px">
-        <s-icon
+        <r-icon
           link
           :iconStyle="{ width: '2rem', height: '2rem' }"
           viewBox="0 0 16 16"
           :icon="mdiReorderHorizontal"
           @click="isDrawer = !isDrawer"
         >
-        </s-icon>
+        </r-icon>
       </div>
-      <s-btn
+      <r-btn
         to="/"
         :style="{
           width: '60px',
@@ -20,39 +20,39 @@
         }"
         hover-bg-color="white"
         ><img class="pt-btn" src="@/assets/images/simplipy.png" width="60" />
-      </s-btn>
-    </s-appbar>
-    <s-drawer v-model="isDrawer">
-      <s-list
+      </r-btn>
+    </r-appbar>
+    <r-drawer v-model="isDrawer">
+      <r-list
         link
         to="introduction"
         :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)', to: '/sappbar' }"
         hover-color="blue"
-        ><template #title>introduction</template></s-list
+        ><template #title>introduction</template></r-list
       >
-      <s-list
+      <r-list
         link
         to="installation"
         :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)', to: '/sappbar' }"
         hover-color="blue"
-        ><template #title>installation</template></s-list
+        ><template #title>installation</template></r-list
       >
-      <s-list
+      <r-list
         link
         :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)', to: '/sappbar' }"
         hover-color="blue"
         :children="drawerChildren"
         title="components"
-      ></s-list>
-    </s-drawer>
-    <s-main>
+      ></r-list>
+    </r-drawer>
+    <r-main>
       <router-view></router-view>
-    </s-main>
+    </r-main>
     <!-- drawer -->
   </div>
 </template>
 <script setup lang="ts">
-import type { TSList } from "types";
+import type { TSList } from "vrame";
 import { mdiListBox, mdiReorderHorizontal } from "@mdi/js";
 
 const isDrawer = ref(false);
@@ -61,52 +61,53 @@ const drawerChildren = ref<TSList[]>([
   {
     icon: { icon: mdiListBox, color: "gray" },
     hoverColor: "blue",
-    title: "s-appbar",
-    to: "s-appbar",
+    title: "r-appbar",
+    to: "r-appbar",
     link: true,
   },
   {
     icon: { icon: mdiListBox, color: "gray" },
     hoverColor: "blue",
-    title: "s-drawer",
-    to: "s-drawer",
+    title: "r-drawer",
+    to: "r-drawer",
     link: true,
   },
   {
     icon: { icon: mdiListBox, color: "gray" },
     hoverColor: "blue",
-    title: "s-list",
-    to: "s-list",
+    title: "r-main",
+    to: "r-main",
     link: true,
   },
   {
     icon: { icon: mdiListBox, color: "gray" },
     hoverColor: "blue",
-    title: "s-icon",
-    to: "s-icon",
+    title: "r-list",
+    to: "r-list",
     link: true,
   },
   {
     icon: { icon: mdiListBox, color: "gray" },
     hoverColor: "blue",
-    title: "s-table",
-    to: "s-table",
+    title: "r-icon",
+    to: "r-icon",
     link: true,
   },
   {
     icon: { icon: mdiListBox, color: "gray" },
     hoverColor: "blue",
-    title: "s-select",
-    to: "s-select",
+    title: "r-table",
+    to: "r-table",
     link: true,
   },
   {
     icon: { icon: mdiListBox, color: "gray" },
     hoverColor: "blue",
-    title: "s-select",
-    to: "s-select",
+    title: "r-btn",
+    to: "r-btn",
     link: true,
   },
+
   {
     icon: { icon: mdiListBox, color: "gray" },
     hoverColor: "blue",

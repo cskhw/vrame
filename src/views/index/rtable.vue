@@ -1,26 +1,26 @@
 <template>
   <div class="components-body">
-    <div class="title">s-table</div>
+    <div class="title">r-table</div>
     <p class="text-400-20-lightgray">
-      The <code class="text-bold-20-black">s-table</code> component is ui frame like html's table, th, tr... tags. You can put in styles freely via to props.
+      The <code class="text-bold-20-black">r-table</code> component is ui frame like html's table, th, tr... tags. You can put in styles freely via to props.
     </p>
 
     <div class="sub-title">props</div>
-    <s-table
+    <r-table
       v-model="propsTableItems"
       style="margin-bottom: 3rem"
       :headers="headers"
       :tableStyles="tableColumnSpec"
     >
-    </s-table>
+    </r-table>
     <div class="sub-title">emits</div>
-    <s-table
+    <r-table
       v-model="emitsTableItems"
       style="margin-bottom: 3rem"
       :headers="headers"
       :tableStyles="tableColumnSpec"
     >
-    </s-table>
+    </r-table>
 
     <div class="sub-title">Usage</div>
     <p class="text-400-20-lightgray">
@@ -58,7 +58,7 @@ const propsTableItems = ref<IpropsTable[]>([
       <div>&nbsp;&nbsp;columnStyle?: (idx: number) => CSSProperties;</div>
       <div>&nbsp;&nbsp;tdStyle?: (ridx: number, cidx: number) => CSSProperties;</div>
       }`,
-    desc: `Can set table's styles:<br/> table, tHeader, tBody, thStyle, trStyle, columnStyle, tdStyle. If tableStyles's type is undefined, s-table will has default style.`,
+    desc: `Can set table's styles:<br/> table, tHeader, tBody, thStyle, trStyle, columnStyle, tdStyle. If tableStyles's type is undefined, r-table will has default style.`,
   },
 ]);
 

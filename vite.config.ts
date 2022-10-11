@@ -1,6 +1,10 @@
 import path from "path";
+import fs from "fs";
+
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+
+import packageJson from "./package.json";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,12 +22,14 @@ export default defineConfig({
       fileName: (format) => `vrame.${format}.js`,
     },
     rollupOptions: {
+      input: "./src/index.ts",
       external: ["vue"],
       output: {
         globals: {
           vue: "Vue",
         },
         exports: "named",
+        banner: "/* vrame v" + packageJson.version + "-alpha*/",
       },
     },
   },

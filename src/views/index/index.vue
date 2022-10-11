@@ -6,24 +6,24 @@
     <div class="home-desc">Simplipy is simple.</div>
 
     <div class="home-btns-box">
-      <s-btn
+      <r-btn
         to="introduction"
         :btnStyle="{ width: '10rem', backgroundColor: 'black', color: 'white' }"
         style="margin-right: 2rem"
       >
-        <s-icon
+        <r-icon
           style="margin-right: 0.5rem"
           color="white"
           :icon="mdiSimpleIcons"
         />
-        GET STARTED</s-btn
+        GET STARTED</r-btn
       >
-      <s-btn
+      <r-btn
         href="https://github.com/cskhw/simplify"
         :btnStyle="{ width: '10rem', backgroundColor: 'gray', color: 'white' }"
       >
-        <s-icon style="margin-right: 0.5rem" color="white" :icon="mdiGithub" />
-        GITHUB</s-btn
+        <r-icon style="margin-right: 0.5rem" color="white" :icon="mdiGithub" />
+        GITHUB</r-btn
       >
     </div>
     <div class="home-footer">

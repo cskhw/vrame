@@ -9,11 +9,11 @@ import SSelect from "@/components/r-select/RSelect.vue";
 
 export default [
   { name: "s-appbar", component: SAppbar },
-  { name: "s-drawer", component: SDrawer },
-  { name: "s-main", component: SMain },
-  { name: "s-list", component: SList },
-  { name: "s-btn", component: SBtn },
-  { name: "s-icon", component: SIcon },
-  { name: "s-table", component: STable },
+  { name: "r-drawer", component: SDrawer },
+  { name: "r-main", component: SMain },
+  { name: "r-list", component: SList },
+  { name: "r-btn", component: SBtn },
+  { name: "r-icon", component: SIcon },
+  { name: "r-table", component: STable },
   { name: "s-select", component: SSelect },
 ];

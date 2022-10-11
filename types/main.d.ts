@@ -1,11 +1,13 @@
 declare module "vrame" {
   import type { CSSProperties, Ref, Plugin, Component } from "vue";
 
-  export interface VrameConfig extends Object {
-    components: Component[];
+  export interface VrameConfig {
+    components?: Plugin[];
   }
 
-  export function createVrame(vrameConfig): Plugin;
+  export function createVrame(vrameConfig?: VrameConfig): Plugin;
+
+  export const components: Plugin[];
 
   export interface IIComponentSpinner {
     onSpin: () => void;
@@ -53,3 +55,5 @@ declare module "vrame" {
     value: any;
   }
 }
+
+export default {};

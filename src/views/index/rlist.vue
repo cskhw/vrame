@@ -1,18 +1,18 @@
 <template>
   <div class="components-body">
-    <div class="title">s-list</div>
+    <div class="title">r-list</div>
     <p class="text-400-20-lightgray">
-      The <code class="text-bold-20-black">s-list</code> component is used to show several menus, etc.
+      The <code class="text-bold-20-black">r-list</code> component is used to show several menus, etc.
     </p>
 
     <div class="sub-title">props</div>
-    <s-table
+    <r-table
     style="margin-bottom: 3rem"
       v-model="tableItems"
       :headers="headers"
       :tableStyles="tableColumnSpec"
     >
-    </s-table>
+    </r-table>
 
     <div class="sub-title">Usage</div>
     <p class="text-400-20-lightgray">
@@ -32,7 +32,7 @@ const tableItems = ref<IpropsTable[]>([
   {
     name: "listStyle",
     type: "CSSProperties?",
-    desc: "Define s-list's style",
+    desc: "Define r-list's style",
   },
   {
     name: "icon",
@@ -47,17 +47,17 @@ const tableItems = ref<IpropsTable[]>([
   {
     name: "hoverColor",
     type: "string?",
-    desc: `If you hover the cursor on s-list, it's color will change to hoverColor.`,
+    desc: `If you hover the cursor on r-list, it's color will change to hoverColor.`,
   },
   {
     name: "hoverBgColor",
     type: "string?",
-    desc: `If you hover the cursor on s-list, it's color will change to hoverBgColor.`,
+    desc: `If you hover the cursor on r-list, it's color will change to hoverBgColor.`,
   },
   {
     name: "link",
     type: "boolean?",
-    desc: `If you hover the cursor on s-list, cursor's css will change to pointer.`,
+    desc: `If you hover the cursor on r-list, cursor's css will change to pointer.`,
   },
   {
     name: "to",

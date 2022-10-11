@@ -1,18 +1,18 @@
 <template>
   <div class="components-body">
-    <div class="title">s-icon</div>
+    <div class="title">r-icon</div>
     <p class="text-400-20-lightgray">
-      The <code class="text-bold-20-black">s-icon</code> component display svg(etc. @mdi/js...) icon.
+      The <code class="text-bold-20-black">r-icon</code> component display svg(etc. @mdi/js...) icon.
     </p>
 
     <div class="sub-title">props</div>
-    <s-table
+    <r-table
     style="margin-bottom: 3rem"
       v-model="tableItems"
       :headers="headers"
       :tableStyles="tableColumnSpec"
     >
-    </s-table>
+    </r-table>
 
     <div class="sub-title">Usage</div>
     <p class="text-400-20-lightgray">
@@ -42,12 +42,12 @@ const tableItems = ref<IpropsTable[]>([
   {
     name: "iconStyle",
     type: "CSSProperties?",
-    desc: `s-icon's user style.`,
+    desc: `r-icon's user style.`,
   },
   {
     name: "link",
     type: "boolean?",
-    desc: `If link is true, s-icon's cursor will change to pointer.`,
+    desc: `If link is true, r-icon's cursor will change to pointer.`,
   },
   {
     name: "viewBox",

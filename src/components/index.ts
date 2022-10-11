@@ -1,10 +1,11 @@
 // src/components/index.ts
-import RAppbar from "./r-appbar/RAppbar.vue";
-import RDrawer from "./r-drawer/RDrawer.vue";
-import RMain from "./r-main/RMain.vue";
-import RIcon from "./r-icon/RIcon.vue";
-import RList from "./r-list/RList.vue";
-import RSelect from "./r-select/RSelect.vue";
-import RBtn from "./r-btn/RBtn.vue";
+import RAppbar from "./r-appbar";
+import RDrawer from "./r-drawer";
+import RMain from "./r-main";
+import RIcon from "./r-icon";
+import RList from "./r-list";
+import RSelect from "./r-select";
+import RBtn from "./r-btn";
+import RTable from "./r-table";
 
-export { RAppbar, RDrawer };
+export { RAppbar, RDrawer, RMain, RIcon, RList, RSelect, RBtn, RTable };

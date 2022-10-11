@@ -10,7 +10,7 @@
       <!-- icon -->
       <div style="margin-right: 0.5rem">
         <slot name="icon">
-          <s-icon v-if="icon" :icon="icon.icon" :color="listIconColor" />
+          <r-icon v-if="icon" :icon="icon.icon" :color="listIconColor" />
         </slot>
       </div>
       <!-- title -->
@@ -18,7 +18,7 @@
         <slot name="title"><div v-html="title"></div></slot>
       </div>
       <Transition :name="downIconAnimeName">
-        <s-icon
+        <r-icon
           v-if="children?.length && isShowDownIcon"
           class="r-list-downicon"
           :icon="sListDownIcon"

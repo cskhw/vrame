@@ -4,7 +4,7 @@ import RSelect from "@/components/r-select/RSelect.vue";
 
 export default {
   install(Vue: App) {
-    Vue.component(RSelect.name, RSelect);
+    Vue.component(RSelect.__name || "RSelect", RSelect);
   },
 } as Plugin;
 

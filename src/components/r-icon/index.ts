@@ -4,7 +4,7 @@ import RIcon from "@/components/r-icon/RIcon.vue";
 
 export default {
   install(Vue: App) {
-    Vue.component(RIcon.name, RIcon);
+    Vue.component(RIcon.__name || "RIcon", RIcon);
   },
 } as Plugin;
 

@@ -3085,6 +3085,27 @@ vitest@^0.23.0:
     tinyspy "^1.0.2"
     vite "^2.9.12 || ^3.0.0-0"
 
+vrame@^0.0.33:
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/vrame/-/vrame-0.0.33.tgz#9e26078270881dc1e5e759850141a549654f41f1"
+  integrity sha512-P/yk+AR7h9Y/DjusZjSEbv3Y6VODY5qCZh5/g5uRiDl+FU41FScwFGEqZT+IUWb8Nqex8arSIFxca6/HiP4O1Q==
+  dependencies:
+    pinia "^2.0.21"
+    sass "^1.55.0"
+    vue "^3.2.38"
+    vue-router "^4.1.5"
+
+vrame@^0.0.34:
+  version "0.0.34"
+  resolved "https://registry.yarnpkg.com/vrame/-/vrame-0.0.34.tgz#317fbf95598e9236f74f62b7fd6929dc79504c26"
+  integrity sha512-TJd4cmQLPqExB4Db1c2R7wVaAbEWTmKOmK6kL9UDDy1MPH+7wEbfplGoYstCRp0Qvi+C5FH1uHQCw4lnBBffig==
+  dependencies:
+    pinia "^2.0.21"
+    sass "^1.55.0"
+    vrame "^0.0.33"
+    vue "^3.2.38"
+    vue-router "^4.1.5"
+
 vue-demi@*:
   version "0.13.11"
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.13.11.tgz#7d90369bdae8974d87b1973564ad390182410d99"

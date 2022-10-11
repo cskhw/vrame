@@ -2,19 +2,15 @@ import pinia from "@/plugins/pinia";
 import { createApp, watch } from "vue";
 import App from "@/App.vue";
 import router from "./router";
-import components from "@/utils/components";
 
 const app = createApp(App);
 
 import { ref, reactive, computed } from "vue";
+import { createVrame } from "./index";
 
 window.ref = ref;
 window.reactive = reactive;
 window.computed = computed;
 window.watch = watch;
 
-for (const component of components) {
-  app.component(component.name, component.component);
-}
-
-app.use(router).use(pinia).mount("#app");
+app.use(router).use(pinia).use(createVrame()).mount("#app");

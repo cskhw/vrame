@@ -23,7 +23,7 @@ const _appbarStyle = computed(() => ({
 
 const rAppbar = ref<HTMLElement>();
 
-/**Set s-main's padding-top because appbar's position is fixed.*/
+/**Set r-main's padding-top because appbar's position is fixed.*/
 onMounted(() => {
   if (!rAppbar.value) return;
   const appbarStyle = window.getComputedStyle(rAppbar.value);
@@ -34,7 +34,7 @@ onMounted(() => {
     parseInt(paddingTop.substring(0, 2)) +
     parseInt(height.substring(0, 2)) +
     parseInt(paddingBottom.substring(0, 2));
-  const sMain = document.getElementById("s-main");
+  const sMain = document.getElementById("r-main");
   if (height && sMain) sMain.style.paddingTop = appbarHeight + "px";
 });
 </script>

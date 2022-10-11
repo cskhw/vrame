@@ -1,18 +1,18 @@
 <template>
   <div class="components-body">
-    <div class="title">s-drawer</div>
+    <div class="title">r-drawer</div>
     <p class="text-400-20-lightgray">
-      The <code class="text-bold-20-black">s-drawer</code> component is the sidebar on application's left.
+      The <code class="text-bold-20-black">r-drawer</code> component is the sidebar on application's left.
     </p>
 
     <div class="sub-title">props</div>
-    <s-table
+    <r-table
     style="margin-bottom: 3rem"
       v-model="tableItems"
       :headers="headers"
       :tableStyles="tableColumnSpec"
     >
-    </s-table>
+    </r-table>
 
     <div class="sub-title">Usage</div>
     <p class="text-400-20-lightgray">
