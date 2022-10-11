@@ -52,7 +52,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import type { TSList } from "@/types/components";
+import type { TSList } from "@/types/main";
 import { mdiListBox, mdiReorderHorizontal } from "@mdi/js";
 
 const isDrawer = ref(false);

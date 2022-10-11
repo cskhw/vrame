@@ -1,4 +1,4 @@
-import type { ISTableStyles } from "@/types/components";
+import type { ISTableStyles } from "@/types/main";
 
 export const descriptionTableStyles = computed<ISTableStyles>(
   () =>

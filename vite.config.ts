@@ -10,4 +10,20 @@ export default defineConfig({
     },
   },
   plugins: [vue()],
+  // build vrame
+  build: {
+    lib: {
+      entry: path.resolve(__dirname, "src/index.ts"),
+      name: "vrame",
+      fileName: (format) => `vrame.${format}.js`,
+    },
+    rollupOptions: {
+      external: ["vue"],
+      output: {
+        globals: {
+          vue: "Vue",
+        },
+      },
+    },
+  },
 });

@@ -46,7 +46,7 @@
 </template>
 <script setup lang="ts">
 import useAppStore from "@/stores/useAppStore";
-import type { TSList } from "@/types/components";
+import type { TSList } from "@/types/main";
 import { mdiMenuDown, mdiMenuUp } from "@mdi/js";
 import type { CSSProperties } from "vue";
 import { useRouter } from "vue-router";

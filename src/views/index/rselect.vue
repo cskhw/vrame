@@ -31,7 +31,7 @@
 </template>
 <script setup lang="ts">
 import type { IpropsTable } from "@/types";
-import type { ISTableStyles } from "@/types/components";
+import type { ISTableStyles } from "@/types/main";
 import { descriptionTableStyles } from "@/utils/common";
 
 const value = ref({
