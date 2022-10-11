@@ -15,7 +15,7 @@
       </div>
       <!-- title -->
       <div :style="_titleStyle">
-        <slot name="title">{{ title }}</slot>
+        <slot name="title"><div v-html="title"></div></slot>
       </div>
       <Transition :name="downIconAnimeName">
         <s-icon
@@ -28,16 +28,18 @@
 
     <template v-if="isShowChildren">
       <template v-for="child in children" :key="children">
-        <r-list
-          style="padding-left: 1rem"
-          :link="child.link"
-          :to="child.to"
-          :icon="{ icon: child.icon?.icon, color: child.icon?.color }"
-          :hover-color="child.hoverColor"
-          :children="child.children"
-          @click="onClickSList"
-          ><template #title>{{ child.title }}</template></r-list
-        >
+        <slot name="child" :child="child">
+          <r-list
+            style="padding-left: 1rem"
+            :link="child.link"
+            :to="child.to"
+            :icon="{ icon: child.icon?.icon, color: child.icon?.color }"
+            :hover-color="child.hoverColor"
+            :children="child.children"
+            :title="child.title"
+            @click="onClickSList"
+          />
+        </slot>
       </template>
     </template>
   </div>
@@ -61,7 +63,6 @@ const props = defineProps<{
 }>();
 
 const router = useRouter();
-const appStore = useAppStore();
 
 const isHoverList = ref(false);
 const isShowChildren = ref(false);
@@ -135,7 +136,6 @@ function setDownIcon() {
 
 function onClickSList(e: Event) {
   if (props.children?.length) {
-    e.stopPropagation();
     setDownIcon();
   }
   if (props.to) {
@@ -143,6 +143,6 @@ function onClickSList(e: Event) {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/styles/components/r-list.scss";
 </style>

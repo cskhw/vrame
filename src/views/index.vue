@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <!-- appbar -->
-    <s-appbar drawerIcon>
+    <s-appbar>
       <div style="width: 40px; height: 40px">
         <s-icon
           link
@@ -41,9 +41,9 @@
         link
         :icon="{ icon: mdiListBox, color: 'rgba(0,0,0,0.8)', to: '/sappbar' }"
         hover-color="blue"
-        :children="drawreChildren"
-        ><template #title>components</template></s-list
-      >
+        :children="drawerChildren"
+        title="components"
+      ></s-list>
     </s-drawer>
     <s-main>
       <router-view></router-view>
@@ -57,7 +57,7 @@ import { mdiListBox, mdiReorderHorizontal } from "@mdi/js";
 
 const isDrawer = ref(false);
 
-const drawreChildren = ref<TSList[]>([
+const drawerChildren = ref<TSList[]>([
   {
     icon: { icon: mdiListBox, color: "gray" },
     hoverColor: "blue",

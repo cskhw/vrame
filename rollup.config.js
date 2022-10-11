@@ -18,15 +18,17 @@ const components = fs
   .readdirSync(baseFolderPath)
   .filter((f) => fs.statSync(path.join(baseFolderPath, f)).isDirectory());
 
-console.log(components);
-
 const entries = {
   index: "./src/index.ts",
   ...components.reduce((obj, name) => {
-    obj[name] = baseFolderPath + name;
+    // "-"를 포함한 디렉토리만 컴포넌트 디렉토리임
+
+    if (name.includes("-")) obj[name] = baseFolderPath + name;
     return obj;
   }, {}),
 };
+
+console.log(entries);
 
 const babelOptions = {
   babelHelpers: "bundled",

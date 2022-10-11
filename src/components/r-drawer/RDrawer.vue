@@ -1,18 +1,23 @@
 <template>
-  <div class="r-drawer" @click="onClickSDrawer">
+  <div class="r-drawer">
     <div class="r-drawer-body" :style="[_drawerStyle]">
       <slot />
     </div>
     <Transition name="fade">
-      <div class="r-drawer-bg" v-if="modelValue"></div>
+      <div
+        class="r-drawer-bg"
+        v-if="modelValue"
+        @click="onClickSDrawerBg"
+      ></div>
     </Transition>
   </div>
 </template>
 <script setup lang="ts">
 import useAppStore from "@/stores/useAppStore";
 import { computed, type CSSProperties } from "vue";
+import { useRoute } from "vue-router";
 
-const appStore = useAppStore();
+const route = useRoute();
 
 const props = withDefaults(
   defineProps<{
@@ -40,9 +45,13 @@ const _drawerStyle = computed(() => ({
   top: `${props.drawerStyle.top}`,
 }));
 
-function onClickSDrawer() {
+function onClickSDrawerBg() {
   emit("update:modelValue", false);
 }
+
+watch(route, () => {
+  emit("update:modelValue", false);
+});
 </script>
 <style lang="scss" scoped>
 @import "@/styles/components/r-drawer.scss";

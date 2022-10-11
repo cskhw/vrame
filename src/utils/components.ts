@@ -1,11 +1,11 @@
-import SDrawer from "@/components/RDrawer.vue";
+import SDrawer from "@/components/r-drawer/RDrawer.vue";
 import SAppbar from "@/components/r-appbar/RAppbar.vue";
-import SList from "@/components/RList.vue";
-import SBtn from "@/components/RBtn.vue";
-import SIcon from "@/components/RIcon.vue";
-import STable from "@/components/RTable.vue";
-import SMain from "@/components/RMain.vue";
-import SSelect from "@/components/RSelect.vue";
+import SList from "@/components/r-list/RList.vue";
+import SBtn from "@/components/r-btn/RBtn.vue";
+import SIcon from "@/components/r-icon/RIcon.vue";
+import STable from "@/components/r-table/RTable.vue";
+import SMain from "@/components/r-main/RMain.vue";
+import SSelect from "@/components/r-select/RSelect.vue";
 
 export default [
   { name: "s-appbar", component: SAppbar },
