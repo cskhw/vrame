@@ -1,12 +1,13 @@
 {
   "name": "vrame",
-  "version": "0.0.3",
+  "version": "0.0.16",
   "description": "Most Simple Vue Ui Framework",
   "author": "cskhw",
   "files": [
-    "dist"
+    "/dist",
+    "/types"
   ],
-  "types": ".src/types/main.d.ts",
+  "types": "./types/main.d.ts",
   "main": "./dist/vrame.umd.js",
   "module": "./dist/vrame.es.js",
   "exports": {

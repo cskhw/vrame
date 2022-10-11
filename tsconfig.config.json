@@ -1,9 +1,12 @@
 {
   "extends": "@vue/tsconfig/tsconfig.node.json",
   "include": ["vite.config.*", "vitest.config.*", "cypress.config.*"],
+  // include library type files(ts, d.ts)
+  "paths": {
+    "*": ["./types/*"]
+  },
   "compilerOptions": {
     "composite": true,
-    "types": ["node"],
     // allow json
     "resolveJsonModule": true,
     "esModuleInterop": true,

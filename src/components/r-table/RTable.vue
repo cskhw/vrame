@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ISTableStyles } from "@/types/main";
+import type { ISTableStyles } from "types/main";
 
 // props 데이터 없을 때 초기값 설정
 const props = defineProps<{
