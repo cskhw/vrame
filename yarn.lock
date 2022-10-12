@@ -3307,6 +3307,28 @@
     "vue" "^3.2.38"
     "vue-router" "^4.1.5"
 
+"vrame@^0.0.55":
+  "integrity" "sha512-WKmJriZ/Bekx0vjFh8N6b4KTA75ppFZ303yL8AJ4OjgbKhlYqFqT4tg871uA3xbhOhoXZg/hTOJoaLpeBYHxqg=="
+  "resolved" "https://registry.npmjs.org/vrame/-/vrame-0.0.55.tgz"
+  "version" "0.0.55"
+  dependencies:
+    "pinia" "^2.0.21"
+    "sass" "^1.55.0"
+    "vrame" "^0.0.34"
+    "vue" "^3.2.38"
+    "vue-router" "^4.1.5"
+
+"vrame@^0.0.56":
+  "integrity" "sha512-FA6m54hBbxqV9+SrkV/jfGMiiRzENNBqz7t/Y2GHQhp/t3L+x4itIFdmlvUCgJ1GCXdvnfSLv/SBqnXUISIrGA=="
+  "resolved" "https://registry.npmjs.org/vrame/-/vrame-0.0.56.tgz"
+  "version" "0.0.56"
+  dependencies:
+    "pinia" "^2.0.21"
+    "sass" "^1.55.0"
+    "vrame" "^0.0.55"
+    "vue" "^3.2.38"
+    "vue-router" "^4.1.5"
+
 "vue-demi@*":
   "integrity" "sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A=="
   "resolved" "https://registry.npmjs.org/vue-demi/-/vue-demi-0.13.11.tgz"
