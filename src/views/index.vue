@@ -111,8 +111,8 @@ const drawerChildren = ref<TSList[]>([
   {
     icon: { icon: mdiListBox, color: "gray" },
     hoverColor: "blue",
-    title: "s-select",
-    to: "s-select",
+    title: "r-select",
+    to: "r-select",
     link: true,
   },
 ]);

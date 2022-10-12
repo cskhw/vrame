@@ -1,16 +1,16 @@
 <template>
   <div class="components-body">
-    <div class="title">s-select</div>
+    <div class="title">r-select</div>
     <p class="text-400-20-lightgray">
-      The <code class="text-bold-20-black">s-select</code> component is ui frame like html's select, option.
+      The <code class="text-bold-20-black">r-select</code> component is ui frame like html's select, option.
     </p>
     fdsa
     
-    <s-select v-model="value" :options="selectOptions">
+    <r-select v-model="value" :options="selectOptions">
       <template #value="{}">
 
       </template>
-    </s-select>
+    </r-select>
 
     <div class="sub-title">props</div>
     <r-table
@@ -60,7 +60,7 @@ const tableItems = ref<IpropsTable[]>([
   {
     name: "appBarStyle",
     type: "CSSProperties | boolean | undefined",
-  desc: "Define s-appbar's style",
+  desc: "Define r-appbar's style",
   },
   {
     name: "drawerIcon",

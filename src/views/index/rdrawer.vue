@@ -37,7 +37,7 @@ const tableItems = ref<IpropsTable[]>([
   {
     name: "drawerStyle",
     type: "CSSProperties | boolean | undefined",
-    desc: "Define s-appbar's style",
+    desc: "Define r-appbar's style",
   },
   {
     name: "shadow",
