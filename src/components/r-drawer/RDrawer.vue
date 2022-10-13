@@ -13,7 +13,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import useAppStore from "@/stores/useAppStore";
 import { computed, type CSSProperties } from "vue";
 import { useRoute } from "vue-router";
 

@@ -6,7 +6,7 @@ import router from "./router";
 const app = createApp(App);
 
 import { ref, reactive, computed } from "vue";
-import { createVrame } from "./index";
+import { createVrame } from "vrame";
 
 window.ref = ref;
 window.reactive = reactive;

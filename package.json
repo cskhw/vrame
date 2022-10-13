@@ -1,6 +1,6 @@
 {
   "name": "vrame",
-  "version": "0.0.56",
+  "version": "0.0.85",
   "description": "Most Simple Vue Ui Framework",
   "author": "cskhw",
   "files": [
@@ -35,7 +35,7 @@
   "dependencies": {
     "pinia": "^2.0.21",
     "sass": "^1.55.0",
-    "vrame": "^0.0.56",
+    "vrame": "^0.0.85",
     "vue": "^3.2.38",
     "vue-router": "^4.1.5"
   },
