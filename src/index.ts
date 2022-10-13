@@ -3,6 +3,7 @@ import type { App, Plugin } from "vue";
 
 import * as _components from "./components";
 import type { VrameConfig } from "vrame";
+import { useRouter, useRoute } from "vue-router";
 
 // src/components/index.ts
 import _RAppbar from "./components/r-appbar";
@@ -13,6 +14,8 @@ import _RList from "./components/r-list";
 import _RSelect from "./components/r-select";
 import _RBtn from "./components/r-btn";
 import _RTable from "./components/r-table";
+
+// import "@/styles/main.scss";
 
 export function createVrame(vrameConfig?: VrameConfig): Plugin {
   return {
@@ -25,9 +28,14 @@ export function createVrame(vrameConfig?: VrameConfig): Plugin {
       } else {
         // Auto import all components
         for (const componentKey in _components) {
+          console.log(componentKey);
           app.use((_components as any)[componentKey]);
         }
       }
+      window.ref = ref;
+      window.reactive = reactive;
+      window.computed = computed;
+      window.watch = watch;
     },
   };
 }
