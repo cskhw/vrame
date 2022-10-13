@@ -55,5 +55,3 @@ declare module "vrame" {
     value: any;
   }
 }
-
-export default {};

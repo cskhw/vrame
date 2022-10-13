@@ -5,7 +5,6 @@ import * as _components from "./components";
 import type { VrameConfig } from "vrame";
 import { useRouter, useRoute } from "vue-router";
 
-// src/components/index.ts
 import _RAppbar from "./components/r-appbar";
 import _RDrawer from "./components/r-drawer";
 import _RMain from "./components/r-main";
@@ -15,7 +14,7 @@ import _RSelect from "./components/r-select";
 import _RBtn from "./components/r-btn";
 import _RTable from "./components/r-table";
 
-// import "@/styles/main.scss";
+import "@/styles/main.scss";
 
 export function createVrame(vrameConfig?: VrameConfig): Plugin {
   return {
@@ -28,7 +27,6 @@ export function createVrame(vrameConfig?: VrameConfig): Plugin {
       } else {
         // Auto import all components
         for (const componentKey in _components) {
-          console.log(componentKey);
           app.use((_components as any)[componentKey]);
         }
       }
