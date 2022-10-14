@@ -19,11 +19,6 @@ import _RTable from "./components/r-table";
 
 import "@/styles/main.scss";
 
-window.ref = ref;
-window.reactive = reactive;
-window.computed = computed;
-window.watch = watch;
-
 export function createVrame(vrameConfig?: VrameConfig): Plugin {
   return {
     install(app: App) {

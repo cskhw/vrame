@@ -48,7 +48,7 @@
 </template>
 
 <script setup lang="ts">
-import type { TValue } from "types";
+import type { TValue } from "vrame";
 import { computed, ref, type CSSProperties } from "vue";
 
 const props = defineProps<{

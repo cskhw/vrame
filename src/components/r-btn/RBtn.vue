@@ -10,7 +10,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import type { CSSProperties } from "vue";
+import { computed, ref, type CSSProperties } from "vue";
 import colors from "@/utils/colors";
 import { useRouter } from "vue-router";
 

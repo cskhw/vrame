@@ -25,6 +25,7 @@
 <script setup lang="ts">
 import type { IpropsTable } from "@/types";
 import { descriptionTableStyles } from "@/utils/common";
+import { ref } from "vue"
 
 const headers = ref(["name", "type", "description"]);
 const tableItems = ref<IpropsTable[]>([

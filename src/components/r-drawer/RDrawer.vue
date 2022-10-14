@@ -13,7 +13,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed, type CSSProperties } from "vue";
+import { computed, watch, type CSSProperties } from "vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();

@@ -13,7 +13,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import type { CSSProperties } from "vue";
+import { computed, type CSSProperties } from "vue";
 
 const props = withDefaults(
   defineProps<{

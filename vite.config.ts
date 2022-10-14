@@ -22,10 +22,11 @@ export default defineConfig({
     },
     rollupOptions: {
       input: "./src/index.ts",
-      external: ["vue", "vue-router"],
+      external: ["vue", "vueRouter"],
       output: {
         globals: {
           vue: "Vue",
+          vueRouter: "vueRouter",
         },
         exports: "named",
         banner: "/* vrame v" + packageJson.version + "-alpha*/",
