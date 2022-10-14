@@ -19,7 +19,7 @@ import _RTable from "./components/r-table";
 
 import "@/styles/main.scss";
 
-import style from "../dist/style.css";
+// import style from "../dist/style.css";
 
 export function createVrame(vrameConfig?: VrameConfig): Plugin {
   return {
@@ -37,10 +37,10 @@ export function createVrame(vrameConfig?: VrameConfig): Plugin {
       }
 
       // insert style to library's head
-      const vrameStyle = document.createElement("style");
-      vrameStyle.setAttribute("type", "text/css");
-      vrameStyle.innerHTML = style;
-      document.head.appendChild(vrameStyle);
+      // const vrameStyle = document.createElement("style");
+      // vrameStyle.setAttribute("type", "text/css");
+      // vrameStyle.innerHTML = style;
+      // document.head.appendChild(vrameStyle);
     },
   };
 }
