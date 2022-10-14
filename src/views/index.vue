@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <!-- appbar -->
-    <r-appbar>
+    <r-appbar style="max-height: 32px">
       <div style="width: 40px; height: 40px">
         <r-icon
           link
