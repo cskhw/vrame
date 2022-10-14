@@ -1,5 +1,5 @@
 <template>
-  <div ref="rAppbar" class="r-app-bar" :style="[_appbarStyle]">
+  <div ref="rAppbar" class="r-appbar" :style="[_appbarStyle]">
     <!-- default drawer icon -->
     <slot />
   </div>
