@@ -5,7 +5,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed, onMounted, type CSSProperties } from "vue";
+import { computed, onMounted, ref, type CSSProperties } from "vue";
 import useAppStore from "@/stores/useAppStore";
 import colors from "@/utils/colors";
 
