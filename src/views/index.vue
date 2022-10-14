@@ -19,7 +19,7 @@
           padding: 0,
         }"
         hover-bg-color="white"
-        ><img class="pt-btn" src="@/assets/images/simplipy.png" width="60" />
+        ><img class="pt-btn" src="@/assets/images/vrame.png" width="60" />
       </r-btn>
     </r-appbar>
     <r-drawer v-model="isDrawer">

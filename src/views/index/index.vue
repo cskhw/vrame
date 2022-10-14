@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1 class="home-icon">S</h1>
+    <h1 class="home-icon">V</h1>
     <h1 class="home-title">Most Simple Vue Ui Framework</h1>
     <div class="home-desc">No Ui Framework Dependency.</div>
     <div class="home-desc">Simplipy is simple.</div>
