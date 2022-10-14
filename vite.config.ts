@@ -1,5 +1,4 @@
 import path from "path";
-import fs from "fs";
 
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
@@ -23,7 +22,7 @@ export default defineConfig({
     },
     rollupOptions: {
       input: "./src/index.ts",
-      external: ["vue"],
+      external: ["vue", "vue-router"],
       output: {
         globals: {
           vue: "Vue",
