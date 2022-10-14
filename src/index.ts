@@ -6,7 +6,7 @@ import * as _components from "./components";
 import type { VrameConfig } from "vrame";
 import { useRouter, useRoute, createRouter } from "vue-router";
 
-import router from "vue-router";
+// import router from "vue-router";
 
 import _RAppbar from "./components/r-appbar";
 import _RDrawer from "./components/r-drawer";
@@ -18,6 +18,11 @@ import _RBtn from "./components/r-btn";
 import _RTable from "./components/r-table";
 
 import "@/styles/main.scss";
+
+window.ref = ref;
+window.reactive = reactive;
+window.computed = computed;
+window.watch = watch;
 
 export function createVrame(vrameConfig?: VrameConfig): Plugin {
   return {
@@ -33,17 +38,6 @@ export function createVrame(vrameConfig?: VrameConfig): Plugin {
           app.use((_components as any)[componentKey]);
         }
       }
-      // app.use(
-      //   createRouter({
-      //     history: createWebHistory(import.meta.env.BASE_URL),
-      //     routes: [],
-      //   })
-      // );
-
-      window.ref = ref;
-      window.reactive = reactive;
-      window.computed = computed;
-      window.watch = watch;
     },
   };
 }

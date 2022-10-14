@@ -1,8 +1,8 @@
 <template>
   <div class="components-body">
-    <div class="title">r-list</div>
+    <div class="title">r-btn</div>
     <p class="text-400-20-lightgray">
-      The <code class="text-bold-20-black">r-list</code> component is used to show several menus, etc.
+      The <code class="text-bold-20-black">r-list</code> component is simple button.
     </p>
 
     <div class="sub-title">props</div>
