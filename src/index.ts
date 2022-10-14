@@ -38,7 +38,7 @@ export function createVrame(vrameConfig?: VrameConfig): Plugin {
 
       // insert style to library's head
       const vrameStyle = document.createElement("style");
-      vrameStyle.setAttribute("text/css", style);
+      vrameStyle.setAttribute("type", "text/css");
       vrameStyle.innerHTML = style;
       document.head.appendChild(vrameStyle);
     },
