@@ -20,6 +20,7 @@ const _appbarStyle = computed(() => ({
   boxShadow: props.shadow && "0 0 6px 1px rgba(0,0,0,0.3)",
   ...props.appBarStyle,
 }));
+w;
 
 const rAppbar = ref<HTMLElement>();
 
