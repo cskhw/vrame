@@ -19,6 +19,8 @@ import _RTable from "./components/r-table";
 
 import "@/styles/main.scss";
 
+import style from "../dist/style.css";
+
 export function createVrame(vrameConfig?: VrameConfig): Plugin {
   return {
     install(app: App) {
@@ -33,6 +35,12 @@ export function createVrame(vrameConfig?: VrameConfig): Plugin {
           app.use((_components as any)[componentKey]);
         }
       }
+
+      // insert style to library's head
+      const vrameStyle = document.createElement("style");
+      vrameStyle.setAttribute("text/css", style);
+      vrameStyle.innerHTML = style;
+      document.head.appendChild(vrameStyle);
     },
   };
 }
