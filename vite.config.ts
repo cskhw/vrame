@@ -22,7 +22,7 @@ export default defineConfig({
     },
     rollupOptions: {
       input: "./src/index.ts",
-      external: ["vue", "vueRouter"],
+      external: ["vue", "vue-router"],
       output: {
         globals: {
           vue: "Vue",
