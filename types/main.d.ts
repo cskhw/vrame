@@ -28,7 +28,7 @@ declare module "vrame" {
   }
 
   // SList
-  export interface TSList {
+  export type TSList = {
     listStyle?: CSSProperties;
     icon?: { icon: string; color: string };
     title?: string;
@@ -37,7 +37,8 @@ declare module "vrame" {
     link?: boolean;
     to?: string;
     children?: TSList[];
-  }
+    click?: (...args: any[]) => any;
+  };
 
   // STable
   export interface ISTableStyles {

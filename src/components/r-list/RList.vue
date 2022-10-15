@@ -37,6 +37,7 @@
             :hover-color="child.hoverColor"
             :children="child.children"
             :title="child.title"
+            :click="child.click"
             @click="onClickSList"
           />
         </slot>
@@ -141,7 +142,9 @@ function onClickSList(e: Event) {
   if (props.to) {
     router.push(props.to);
   }
-  if (props.click) props.click();
+  if (props.click) {
+    props.click();
+  }
 }
 </script>
 <style lang="scss" scoped>

@@ -54,17 +54,20 @@
 <script setup lang="ts">
 import type { TSList } from "vrame";
 import { mdiListBox, mdiReorderHorizontal } from "@mdi/js";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 const isDrawer = ref(false);
 
-const drawerChildren = ref<TSList[]>([
+const drawerChildren = computed<TSList[]>(() => [
   {
     icon: { icon: mdiListBox, color: "gray" },
     hoverColor: "blue",
     title: "r-appbar",
     to: "r-appbar",
     link: true,
+    click: () => {
+      console.log("fdsafdsa");
+    },
   },
   {
     icon: { icon: mdiListBox, color: "gray" },
