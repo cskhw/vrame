@@ -1,10 +1,8 @@
-import { createWebHistory } from "vue-router";
 // src/index.ts
 import type { App, Plugin } from "vue";
 
 import * as _components from "./components";
 import type { VrameConfig } from "vrame";
-import { useRouter, useRoute, createRouter } from "vue-router";
 
 // import router from "vue-router";
 
@@ -16,6 +14,7 @@ import _RList from "./components/r-list";
 import _RSelect from "./components/r-select";
 import _RBtn from "./components/r-btn";
 import _RTable from "./components/r-table";
+import _RSearchbar from "./components/r-searchbar";
 
 import "@/styles/main.scss";
 
@@ -56,6 +55,7 @@ export const RList = _RList;
 export const RSelect = _RSelect;
 export const RBtn = _RBtn;
 export const RTable = _RTable;
+export const RSearchbar = _RSearchbar;
 
 const Vrame = {
   createVrame: createVrame,

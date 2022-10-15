@@ -63,6 +63,11 @@ const router = createRouter({
           name: "rbtn",
           component: () => import("@/views/index/rbtn.vue"),
         },
+        {
+          path: "/r-searchbar",
+          name: "rsearchbar",
+          component: () => import("@/views/index/rsearchbar.vue"),
+        },
       ],
     },
   ],

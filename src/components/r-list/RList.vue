@@ -59,6 +59,7 @@ const props = defineProps<{
   link?: boolean;
   to?: string;
   children?: TSList[];
+  click?: (...args: any[]) => any;
 }>();
 
 const router = useRouter();
@@ -140,6 +141,7 @@ function onClickSList(e: Event) {
   if (props.to) {
     router.push(props.to);
   }
+  if (props.click) props.click();
 }
 </script>
 <style lang="scss" scoped>

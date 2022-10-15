@@ -7,5 +7,16 @@ import RList from "./r-list";
 import RSelect from "./r-select";
 import RBtn from "./r-btn";
 import RTable from "./r-table";
+import RSearchbar from "./r-searchbar";
 
-export { RAppbar, RDrawer, RMain, RIcon, RList, RSelect, RBtn, RTable };
+export {
+  RAppbar,
+  RDrawer,
+  RMain,
+  RIcon,
+  RList,
+  RSelect,
+  RBtn,
+  RTable,
+  RSearchbar,
+};

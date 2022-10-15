@@ -1,6 +1,6 @@
 <template>
   <div class="components-body">
-    <div class="title">r-footer</div>
+    <div class="title">r-appbar</div>
     <p class="text-400-20-lightgray">
       The <code class="text-bold-20-black">r-appbar</code> component is fixed to
       the top of the app.
