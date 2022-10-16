@@ -30,6 +30,7 @@ export default defineConfig({
         },
         exports: "named",
         banner: "/* vrame v" + packageJson.version + "-alpha*/",
+        sourcemap: true,
       },
     },
   },

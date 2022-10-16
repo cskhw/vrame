@@ -73,6 +73,11 @@ const router = createRouter({
           name: "rcheckbox",
           component: () => import("@/views/index/rcheckbox.vue"),
         },
+        {
+          path: "/r-textfield",
+          name: "rtextfield",
+          component: () => import("@/views/index/rtextfield.vue"),
+        },
       ],
     },
   ],

@@ -6,7 +6,9 @@
         <r-icon
           link
           :iconStyle="{ width: '2rem', height: '2rem' }"
-          viewBox="0 0 16 16"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
           :icon="mdiReorderHorizontal"
           @click="isDrawer = !isDrawer"
         >
@@ -130,6 +132,13 @@ const drawerChildren = computed<TSList[]>(() => [
     hoverColor: "blue",
     title: "r-checkbox",
     to: "r-checkbox",
+    link: true,
+  },
+  {
+    icon: { icon: mdiListBox, color: "gray" },
+    hoverColor: "blue",
+    title: "r-textfield",
+    to: "r-textfield",
     link: true,
   },
 ]);
