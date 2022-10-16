@@ -8,6 +8,7 @@ import RSelect from "./r-select";
 import RBtn from "./r-btn";
 import RTable from "./r-table";
 import RSearchbar from "./r-searchbar";
+import RCheckbox from "./r-checkbox";
 
 export {
   RAppbar,
@@ -19,4 +20,5 @@ export {
   RBtn,
   RTable,
   RSearchbar,
+  RCheckbox,
 };

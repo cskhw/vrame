@@ -1,0 +1,22 @@
+@import "@/styles/colors.scss";
+.common-check-box {
+  width: max-content;
+  height: max-content;
+  .common-check-box-icon {
+    transition: all 0.01s linear;
+    width: max-content;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 0.6;
+    }
+  }
+  .common-check-box-label {
+    cursor: pointer;
+    word-break: keep-all;
+    white-space: nowrap;
+    font-size: 0.75rem;
+  }
+}

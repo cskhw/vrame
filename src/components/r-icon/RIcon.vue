@@ -1,10 +1,8 @@
 <template>
   <div class="r-icon" :class="[link && 'pt-btn']" :style="[_iconStyle]">
     <svg
-      :width="_iconStyle.width || _iconStyle.width.toString().substring(0, 2)"
-      :height="
-        _iconStyle?.height || _iconStyle.height.toString().substring(0, 2)
-      "
+      :width="width || 24"
+      :height="height || 24"
       :fill="color"
       :viewBox="viewBox"
     >
@@ -18,6 +16,8 @@ import { computed, type CSSProperties } from "vue";
 const props = withDefaults(
   defineProps<{
     icon: string;
+    width?: number | string;
+    height?: number | string;
     color?: string;
     iconStyle?: CSSProperties;
     link?: boolean;
@@ -31,7 +31,6 @@ const props = withDefaults(
 const _iconStyle = computed(() => ({
   width: "24px",
   height: "24px",
-  overflow: "hidden",
   ...props.iconStyle,
 }));
 </script>

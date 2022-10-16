@@ -4,8 +4,6 @@ import type { App, Plugin } from "vue";
 import * as _components from "./components";
 import type { VrameConfig } from "vrame";
 
-// import router from "vue-router";
-
 import _RAppbar from "./components/r-appbar";
 import _RDrawer from "./components/r-drawer";
 import _RMain from "./components/r-main";

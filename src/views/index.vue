@@ -125,6 +125,13 @@ const drawerChildren = computed<TSList[]>(() => [
     to: "r-searchbar",
     link: true,
   },
+  {
+    icon: { icon: mdiListBox, color: "gray" },
+    hoverColor: "blue",
+    title: "r-checkbox",
+    to: "r-checkbox",
+    link: true,
+  },
 ]);
 </script>
 <style lang="scss" scoped></style>

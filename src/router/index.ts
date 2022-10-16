@@ -68,6 +68,11 @@ const router = createRouter({
           name: "rsearchbar",
           component: () => import("@/views/index/rsearchbar.vue"),
         },
+        {
+          path: "/r-checkbox",
+          name: "rcheckbox",
+          component: () => import("@/views/index/rcheckbox.vue"),
+        },
       ],
     },
   ],
