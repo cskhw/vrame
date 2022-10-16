@@ -13,6 +13,7 @@ import _RSelect from "./components/r-select";
 import _RBtn from "./components/r-btn";
 import _RTable from "./components/r-table";
 import _RSearchbar from "./components/r-searchbar";
+import _RCheckbox from "./components/r-checkbox";
 
 import "@/styles/main.scss";
 
@@ -54,6 +55,7 @@ export const RSelect = _RSelect;
 export const RBtn = _RBtn;
 export const RTable = _RTable;
 export const RSearchbar = _RSearchbar;
+export const RCheckbox = _RCheckbox;
 
 const Vrame = {
   createVrame: createVrame,

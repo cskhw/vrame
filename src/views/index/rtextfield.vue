@@ -1,7 +1,7 @@
 <template>
   <template>
   <div class="components-body">
-    <div class="title">r-table</div>
+    <div class="title">r-textfield</div>
     <p class="text-400-20-lightgray">
       The <code class="text-bold-20-black">r-table</code> component is ui frame like html's table, th, tr... tags. You can put in styles freely via to props.
     </p>

@@ -1,10 +1,14 @@
 @import "@/styles/colors.scss";
-.common-check-box {
+.r-checkbox {
+  display: flex;
+  align-items: center;
   width: max-content;
   height: max-content;
-  .common-check-box-icon {
+  .r-check-box-icon {
     transition: all 0.01s linear;
-    width: max-content;
+
+    width: 1.25rem;
+    height: 1.25rem;
     cursor: pointer;
     &:hover {
       opacity: 0.8;
@@ -13,10 +17,8 @@
       opacity: 0.6;
     }
   }
-  .common-check-box-label {
+  .r-check-box-label {
     cursor: pointer;
-    word-break: keep-all;
-    white-space: nowrap;
-    font-size: 0.75rem;
+    margin-left: 0.25rem;
   }
 }

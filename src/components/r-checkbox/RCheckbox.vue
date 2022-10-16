@@ -75,27 +75,4 @@ function onClickRadioBox() {
 </script>
 <style lang="scss" scoped>
 @import "@/styles/components/r-checkbox.scss";
-.r-checkbox {
-  display: flex;
-  align-items: center;
-  width: max-content;
-  height: max-content;
-  .r-check-box-icon {
-    transition: all 0.01s linear;
-
-    width: 1.25rem;
-    height: 1.25rem;
-    cursor: pointer;
-    &:hover {
-      opacity: 0.8;
-    }
-    &:active {
-      opacity: 0.6;
-    }
-  }
-  .r-check-box-label {
-    cursor: pointer;
-    margin-left: 0.25rem;
-  }
-}
 </style>
