@@ -97,4 +97,6 @@ const emitsTableItems = ref<IpropsTable[]>([
 ]);
 const tableColumnSpec = descriptionTableStyles
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+@import "@/styles/components/r-checkbox.scss";
+</style>
