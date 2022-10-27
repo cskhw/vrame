@@ -14,7 +14,8 @@
     ".": {
       "import": "./dist/vrame.es.js",
       "require": "./dist/vrame.umd.js"
-    }
+    },
+    "./components": "./dist/components/index.mjs"
   },
   "license": "MIT",
   "scripts": {
