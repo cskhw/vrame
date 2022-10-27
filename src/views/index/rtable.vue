@@ -1,5 +1,4 @@
 <template>
-  <template>
   <div class="components-body">
     <div class="title">r-table</div>
     <p class="text-400-20-lightgray">
