@@ -1,6 +1,6 @@
 import type { App, Plugin } from "vue";
 
-import RDrawer from "@/components/r-drawer/RDrawer.vue";
+import RDrawer from "@/components/RDrawer/RDrawer.vue";
 
 export default {
   install(Vue: App) {

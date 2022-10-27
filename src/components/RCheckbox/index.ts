@@ -1,6 +1,6 @@
 import type { App, Plugin } from "vue";
 
-import RCheckbox from "@/components/r-checkbox/RCheckbox.vue";
+import RCheckbox from "@/components/RCheckbox/RCheckbox.vue";
 
 export default {
   install(Vue: App) {

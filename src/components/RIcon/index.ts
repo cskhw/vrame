@@ -1,6 +1,6 @@
 import type { App, Plugin } from "vue";
 
-import RIcon from "@/components/r-icon/RIcon.vue";
+import RIcon from "@/components/RIcon/RIcon.vue";
 
 export default {
   install(Vue: App) {

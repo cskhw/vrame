@@ -1,6 +1,6 @@
 import type { App, Plugin } from "vue";
 
-import RTextfield from "@/components/r-textfield/RTextfield.vue";
+import RTextfield from "@/components/RTextfield/RTextfield.vue";
 
 export default {
   install(Vue: App) {

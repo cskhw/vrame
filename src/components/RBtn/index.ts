@@ -1,6 +1,6 @@
 import type { App, Plugin } from "vue";
 
-import RBtn from "@/components/r-btn/RBtn.vue";
+import RBtn from "@/components/RBtn/RBtn.vue";
 
 export default {
   install(Vue: App) {

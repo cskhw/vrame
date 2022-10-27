@@ -1,6 +1,6 @@
 import type { App, Plugin } from "vue";
 
-import RList from "@/components/r-list/RList.vue";
+import RList from "@/components/RList/RList.vue";
 
 export default {
   install(Vue: App) {

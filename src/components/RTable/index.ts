@@ -1,6 +1,6 @@
 import type { App, Plugin } from "vue";
 
-import RTable from "@/components/r-table/RTable.vue";
+import RTable from "@/components/RTable/RTable.vue";
 
 export default {
   install(Vue: App) {
