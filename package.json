@@ -7,7 +7,7 @@
     "/dist",
     "/types"
   ],
-  "types": "./types/main.d.ts",
+  "types": "./types/index.d.ts",
   "main": "./dist/vrame.umd.js",
   "module": "./dist/vrame.es.js",
   "exports": {
@@ -35,7 +35,7 @@
   "dependencies": {
     "pinia": "^2.0.21",
     "sass": "^1.55.0",
-    "vrame": "^0.0.161",
+    "vrame": "^0.0.166",
     "vue": "^3.2.38",
     "vue-router": "^4.1.5"
   },

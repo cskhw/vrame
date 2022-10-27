@@ -3,7 +3,7 @@
   "include": [
     "env.d.ts",
     "shim-vue.d.ts",
-    "types/main.d.ts",
+    "types/index.d.ts",
     "src/**/*",
     "src/**/*.vue",
     "package.json"
