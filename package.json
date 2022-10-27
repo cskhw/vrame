@@ -14,7 +14,8 @@
     ".": {
       "import": "./dist/vrame.es.js",
       "require": "./dist/vrame.umd.js"
-    }
+    },
+    "./components": "./lib/components/index.mjs"
   },
   "scripts": {
     "dev": "vite --port 3000",
