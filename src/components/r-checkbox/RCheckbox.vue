@@ -73,6 +73,6 @@ function onClickRadioBox() {
   if (!props.disabled) emit("update:modelValue", !props.modelValue);
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/components/r-checkbox.scss";
 </style>

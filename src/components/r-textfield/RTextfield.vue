@@ -75,7 +75,7 @@ function onInputTextfield(e: Event) {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/text";
 .r-textfield {
   width: 100%;

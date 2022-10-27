@@ -147,6 +147,6 @@ function onClickSList(e: Event) {
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/components/r-list.scss";
 </style>

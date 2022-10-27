@@ -38,6 +38,6 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/components/r-appbar.scss";
 </style>

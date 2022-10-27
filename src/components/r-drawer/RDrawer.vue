@@ -52,6 +52,6 @@ watch(route, () => {
   emit("update:modelValue", false);
 });
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/components/r-drawer.scss";
 </style>

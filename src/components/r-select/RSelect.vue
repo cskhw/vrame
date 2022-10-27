@@ -113,6 +113,6 @@ function onMouseDownOption(option: TValue) {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/components/r-select.scss";
 </style>

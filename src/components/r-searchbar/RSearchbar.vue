@@ -21,6 +21,6 @@ const _searchbarStyle = computed(() => ({
 }));
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/components/r-appbar.scss";
 </style>

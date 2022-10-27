@@ -72,6 +72,6 @@ function onClickSBtn() {
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/styles/components/r-btn";
 </style>
