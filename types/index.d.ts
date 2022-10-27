@@ -57,32 +57,32 @@ declare module "vrame" {
   }
 }
 
-declare module "@vue/runtime-dom" {
-  export interface HTMLAttributes {
-    // $children?: VNodeChild
-  }
-  export interface SVGAttributes {
-    // $children?: VNodeChild
-  }
-}
+// declare module "@vue/runtime-dom" {
+//   export interface HTMLAttributes {
+//     // $children?: VNodeChild
+//   }
+//   export interface SVGAttributes {
+//     // $children?: VNodeChild
+//   }
+// }
 
-declare module "@vue/runtime-core" {
-  interface Vrame {
-    // defaults: DefaultsInstance;
-    // display: DisplayInstance;
-    // theme: ThemeInstance;
-    // icons: IconOptions;
-    // locale: LocaleAdapter;
-    // rtl: RtlInstance;
-  }
+// declare module "@vue/runtime-core" {
+//   interface Vrame {
+//     // defaults: DefaultsInstance;
+//     // display: DisplayInstance;
+//     // theme: ThemeInstance;
+//     // icons: IconOptions;
+//     // locale: LocaleAdapter;
+//     // rtl: RtlInstance;
+//   }
 
-  export interface ComponentCustomProperties {
-    $vrame: Vrame;
-  }
+//   export interface ComponentCustomProperties {
+//     $vrame: Vrame;
+//   }
 
-  export interface GlobalComponents {
-    RApp: typeof import("vrame/components")["RApp"];
-    RAppbar: typeof import("vrame/components")["RAppbar"];
-    RDrawer: typeof import("vrame/components")["RDrawer"];
-  }
-}
+//   export interface GlobalComponents {
+//     RApp: typeof import("vrame/components")["RApp"];
+//     RAppbar: typeof import("vrame/components")["RAppbar"];
+//     RDrawer: typeof import("vrame/components")["RDrawer"];
+//   }
+// }

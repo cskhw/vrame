@@ -4,21 +4,34 @@ import type { App, Plugin } from "vue";
 import * as _components from "./components";
 import type { VrameConfig } from "vrame";
 
-import _RAppbar from "./components/r-appbar";
-import _RDrawer from "./components/r-drawer";
-import _RMain from "./components/r-main";
-import _RIcon from "./components/r-icon";
-import _RList from "./components/r-list";
-import _RSelect from "./components/r-select";
-import _RBtn from "./components/r-btn";
-import _RTable from "./components/r-table";
-import _RSearchbar from "./components/r-searchbar";
-import _RCheckbox from "./components/r-checkbox";
-import _RTextfield from "./components/r-textfield";
+import _RAppbar from "./components/r-appbar/RAppbar.vue";
+import _RDrawer from "./components/r-drawer/RDrawer.vue";
+import _RMain from "./components/r-main/RMain.vue";
+import _RIcon from "./components/r-icon/RIcon.vue";
+import _RList from "./components/r-list/RList.vue";
+import _RSelect from "./components/r-select/RSelect.vue";
+import _RBtn from "./components/r-btn/RBtn.vue";
+import _RTable from "./components/r-table/RTable.vue";
+import _RSearchbar from "./components/r-searchbar/RSearchbar.vue";
+import _RCheckbox from "./components/r-checkbox/RCheckbox.vue";
+import _RTextfield from "./components/r-textfield/RTextfield.vue";
 
 import "@/styles/main.scss";
 
-import style from "../dist/style.css";
+export const components = _components;
+
+// export each component
+export const RAppbar = _RAppbar;
+export const RDrawer = _RDrawer;
+export const RMain = _RMain;
+export const RIcon = _RIcon;
+export const RList = _RList;
+export const RSelect = _RSelect;
+export const RBtn = _RBtn;
+export const RTable = _RTable;
+export const RSearchbar = _RSearchbar;
+export const RCheckbox = _RCheckbox;
+export const RTextfield = _RTextfield;
 
 export function createVrame(vrameConfig?: VrameConfig): Plugin {
   return {
@@ -36,28 +49,13 @@ export function createVrame(vrameConfig?: VrameConfig): Plugin {
       }
 
       // insert style to library's head
-      const vrameStyle = document.createElement("style");
-      vrameStyle.setAttribute("type", "text/css");
-      vrameStyle.innerHTML = style;
-      document.head.appendChild(vrameStyle);
+      // const vrameStyle = document.createElement("style");
+      // vrameStyle.setAttribute("type", "text/css");
+      // vrameStyle.innerHTML = style;
+      // document.head.appendChild(vrameStyle);
     },
   };
 }
-
-export const components = _components;
-
-// export each component
-export const RAppbar = _RAppbar;
-export const RDrawer = _RDrawer;
-export const RMain = _RMain;
-export const RIcon = _RIcon;
-export const RList = _RList;
-export const RSelect = _RSelect;
-export const RBtn = _RBtn;
-export const RTable = _RTable;
-export const RSearchbar = _RSearchbar;
-export const RCheckbox = _RCheckbox;
-export const RTextfield = _RTextfield;
 
 // export vrame plugin, components
 const Vrame = {

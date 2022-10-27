@@ -14,8 +14,7 @@
     ".": {
       "import": "./dist/vrame.es.js",
       "require": "./dist/vrame.umd.js"
-    },
-    "./components": "./dist/components/index.mjs"
+    }
   },
   "license": "MIT",
   "scripts": {
@@ -35,7 +34,6 @@
   "dependencies": {
     "pinia": "^2.0.21",
     "sass": "^1.55.0",
-    "vrame": "^0.0.166",
     "vue": "^3.2.38",
     "vue-router": "^4.1.5"
   },
@@ -58,7 +56,9 @@
     "start-server-and-test": "^1.14.0",
     "typescript": "~4.7.4",
     "vite": "^3.0.9",
+    "vite-plugin-dts": "^1.6.6",
     "vitest": "^0.23.0",
+    "vrame": "^0.0.167",
     "vue-tsc": "^0.40.7"
   }
 }

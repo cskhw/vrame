@@ -7,7 +7,7 @@
 
     <div class="sub-title">props</div>
     <r-table
-    style="margin-bottom: 3rem"
+      style="margin-bottom: 3rem"
       v-model="tableItems"
       :headers="headers"
       :tableStyles="tableColumnSpec"
