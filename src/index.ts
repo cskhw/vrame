@@ -4,17 +4,17 @@ import type { App, Plugin } from "vue";
 import * as _components from "./components";
 import type { VrameConfig } from "vrame";
 
-import _RAppbar from "./components/r-appbar/RAppbar.vue";
-import _RDrawer from "./components/r-drawer/RDrawer.vue";
-import _RMain from "./components/r-main/RMain.vue";
-import _RIcon from "./components/r-icon/RIcon.vue";
-import _RList from "./components/r-list/RList.vue";
-import _RSelect from "./components/r-select/RSelect.vue";
-import _RBtn from "./components/r-btn/RBtn.vue";
-import _RTable from "./components/r-table/RTable.vue";
-import _RSearchbar from "./components/r-searchbar/RSearchbar.vue";
-import _RCheckbox from "./components/r-checkbox/RCheckbox.vue";
-import _RTextfield from "./components/r-textfield/RTextfield.vue";
+import _RAppbar from "./components/RAppbar/RAppbar.vue";
+import _RDrawer from "./components/RDrawer/RDrawer.vue";
+import _RMain from "./components/RMain/RMain.vue";
+import _RIcon from "./components/RIcon/RIcon.vue";
+import _RList from "./components/RList/RList.vue";
+import _RSelect from "./components/RSelect/RSelect.vue";
+import _RBtn from "./components/RBtn/RBtn.vue";
+import _RTable from "./components/RTable/RTable.vue";
+import _RSearchbar from "./components/RSearchbar/RSearchbar.vue";
+import _RCheckbox from "./components/RCheckbox/RCheckbox.vue";
+import _RTextfield from "./components/RTextfield/RTextfield.vue";
 
 import "@/styles/main.scss";
 
