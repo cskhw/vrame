@@ -1,3 +1,20 @@
+import * as vue from "vue";
+import {
+  Ref,
+  PropType,
+  VNodeChild,
+  nextTick,
+  ComponentInternalInstance,
+  ComputedRef,
+  ExtractPropTypes,
+  JSXComponent,
+  Prop,
+  WritableComputedRef,
+  InjectionKey,
+} from "vue";
+import * as vue_router from "vue-router";
+import { RouteLocationRaw } from "vue-router";
+
 declare module "vrame" {
   import type { CSSProperties, Ref, Plugin, Component } from "vue";
 
