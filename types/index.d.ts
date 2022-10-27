@@ -98,8 +98,9 @@ declare module "@vue/runtime-core" {
   }
 
   export interface GlobalComponents {
-    RApp: typeof import("../src/components")["RApp"];
-    RAppbar: typeof import("vrame/components")["RAppbar"];
-    RDrawer: typeof import("vrame/components")["RDrawer"];
+    RAppbar: typeof import("../src/index")["RAppbar"];
+    RDrawer: typeof import("../src/index")["RDrawer"];
+    RTable: typeof import("../src/index")["RTable"];
+    RBtn: typeof import("../src/index")["RBtn"];
   }
 }
