@@ -53,7 +53,7 @@ export function createVrame(vrameConfig?: VrameConfig): Plugin {
       // vrameStyle.setAttribute("type", "text/css");
       // vrameStyle.innerHTML = style;
       // document.head.appendChild(vrameStyle);
-      // test
+      // testB
     },
   };
 }
