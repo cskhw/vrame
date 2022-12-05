@@ -1,6 +1,10 @@
 {
   "name": "vrame",
+<<<<<<< HEAD
+  "version": "0.0.102",
+=======
   "version": "0.0.184",
+>>>>>>> fe6f49010a8d29522e94dd358433e5fde0cd8be3
   "description": "Most Simple Vue Ui Framework",
   "author": "cskhw",
   "files": [
@@ -16,7 +20,11 @@
       "import": "./dist/vrame.es.js",
       "require": "./dist/vrame.umd.js"
     },
+<<<<<<< HEAD
+    "./components": "./lib/components/index.mjs"
+=======
     "./components": "./dist/src/index.d.ts"
+>>>>>>> fe6f49010a8d29522e94dd358433e5fde0cd8be3
   },
   "license": "MIT",
   "scripts": {
