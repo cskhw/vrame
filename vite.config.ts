@@ -2,6 +2,7 @@ import path from "path";
 
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import dts from "vite-plugin-dts";
 
 import packageJson from "./package.json";
 
@@ -12,7 +13,12 @@ export default defineConfig({
       "@": `${path.resolve(__dirname, "src")}`,
     },
   },
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    dts({
+      insertTypesEntry: true,
+    }),
+  ],
   // build vrame
   build: {
     lib: {
@@ -26,9 +32,11 @@ export default defineConfig({
       output: {
         globals: {
           vue: "Vue",
+          vueRouter: "vueRouter",
         },
         exports: "named",
         banner: "/* vrame v" + packageJson.version + "-alpha*/",
+        sourcemap: true,
       },
     },
   },

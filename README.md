@@ -8,6 +8,12 @@
 
 Vrame is a most simple vue UI framework. vrame provides easy-to-read docs and easy-to-use props, emits, utils, etc.
 
+<<<<<<< HEAD
+### 📑 License
+
+[MIT](http://opensource.org/licenses/MIT)
+
+=======
 ### git commit format
 
 - feat: new feature
@@ -18,4 +24,5 @@ Vrame is a most simple vue UI framework. vrame provides easy-to-read docs and ea
 
 [MIT](http://opensource.org/licenses/MIT)
 
+>>>>>>> 7c29525de74fede3209d284f31e6a2038d74a520
 Copyright (c) 2022-present Vrame LLC

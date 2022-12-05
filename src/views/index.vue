@@ -1,12 +1,14 @@
 <template>
   <div class="main">
     <!-- appbar -->
-    <r-appbar>
+    <r-appbar :appBarStyle="{}" style="max-height: 32px">
       <div style="width: 40px; height: 40px">
         <r-icon
           link
           :iconStyle="{ width: '2rem', height: '2rem' }"
-          viewBox="0 0 16 16"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
           :icon="mdiReorderHorizontal"
           @click="isDrawer = !isDrawer"
         >
@@ -54,16 +56,20 @@
 <script setup lang="ts">
 import type { TSList } from "vrame";
 import { mdiListBox, mdiReorderHorizontal } from "@mdi/js";
+import { computed, ref } from "vue";
 
 const isDrawer = ref(false);
 
-const drawerChildren = ref<TSList[]>([
+const drawerChildren = computed<TSList[]>(() => [
   {
     icon: { icon: mdiListBox, color: "gray" },
     hoverColor: "blue",
     title: "r-appbar",
     to: "r-appbar",
     link: true,
+    click: () => {
+      console.log("fdsafdsa");
+    },
   },
   {
     icon: { icon: mdiListBox, color: "gray" },
@@ -107,12 +113,32 @@ const drawerChildren = ref<TSList[]>([
     to: "r-btn",
     link: true,
   },
-
   {
     icon: { icon: mdiListBox, color: "gray" },
     hoverColor: "blue",
     title: "r-select",
     to: "r-select",
+    link: true,
+  },
+  {
+    icon: { icon: mdiListBox, color: "gray" },
+    hoverColor: "blue",
+    title: "r-searchbar",
+    to: "r-searchbar",
+    link: true,
+  },
+  {
+    icon: { icon: mdiListBox, color: "gray" },
+    hoverColor: "blue",
+    title: "r-checkbox",
+    to: "r-checkbox",
+    link: true,
+  },
+  {
+    icon: { icon: mdiListBox, color: "gray" },
+    hoverColor: "blue",
+    title: "r-textfield",
+    to: "r-textfield",
     link: true,
   },
 ]);

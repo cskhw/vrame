@@ -1,4 +1,5 @@
-import type { ISTableStyles } from "types/main";
+import type { ISTableStyles } from "vrame";
+import { computed } from "vue";
 
 export const descriptionTableStyles = computed<ISTableStyles>(
   () =>

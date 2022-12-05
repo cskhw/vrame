@@ -63,6 +63,21 @@ const router = createRouter({
           name: "rbtn",
           component: () => import("@/views/index/rbtn.vue"),
         },
+        {
+          path: "/r-searchbar",
+          name: "rsearchbar",
+          component: () => import("@/views/index/rsearchbar.vue"),
+        },
+        {
+          path: "/r-checkbox",
+          name: "rcheckbox",
+          component: () => import("@/views/index/rcheckbox.vue"),
+        },
+        {
+          path: "/r-textfield",
+          name: "rtextfield",
+          component: () => import("@/views/index/rtextfield.vue"),
+        },
       ],
     },
   ],

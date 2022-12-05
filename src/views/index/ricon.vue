@@ -7,7 +7,7 @@
 
     <div class="sub-title">props</div>
     <r-table
-    style="margin-bottom: 3rem"
+      style="margin-bottom: 3rem"
       v-model="tableItems"
       :headers="headers"
       :tableStyles="tableColumnSpec"
@@ -24,7 +24,7 @@
 </template>
 <script setup lang="ts">
 import type { IpropsTable } from "@/types";
-import type { ISTableStyles } from "types";
+import { ref } from "vue"
 import { descriptionTableStyles } from "@/utils/common";
 
 const headers = ref(["name", "type", "description"]);

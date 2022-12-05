@@ -1,6 +1,6 @@
 <template>
   <div class="components-body">
-    <div class="title">r-table</div>
+    <div class="title">r-checkbox</div>
     <p class="text-400-20-lightgray">
       The <code class="text-bold-20-black">r-table</code> component is ui frame like html's table, th, tr... tags. You can put in styles freely via to props.
     </p>
@@ -13,19 +13,21 @@
       :tableStyles="tableColumnSpec"
     >
     </r-table>
-    <div class="sub-title">emits</div>
-    <r-table
-      v-model="emitsTableItems"
-      style="margin-bottom: 3rem"
-      :headers="headers"
-      :tableStyles="tableColumnSpec"
-    >
-    </r-table>
-
+    
     <div class="sub-title">Usage</div>
     <p class="text-400-20-lightgray">
       <div>
         Usage
+        <r-checkbox  v-model="icChecked" label="ffdsa"
+        :width="30"
+        :height="30"
+        viewBox="0 0 24 24"
+        :checkboxStyle="{
+          width: '30px',
+          height: '30px',
+        }"
+        >
+        </r-checkbox>
       </div>
     </p>
   </div>
@@ -33,7 +35,10 @@
 <script setup lang="ts">
 import type { IpropsTable } from "@/types";
 import { descriptionTableStyles } from "@/utils/common";
+import { mdiAbacus, mdiAbTesting } from "@mdi/js";
 import { ref } from "vue"
+
+const icChecked = ref(false)
 
 const headers = ref(["name", "type", "description"]);
 const propsTableItems = ref<IpropsTable[]>([
@@ -92,4 +97,6 @@ const emitsTableItems = ref<IpropsTable[]>([
 ]);
 const tableColumnSpec = descriptionTableStyles
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+@import "@/styles/components/r-checkbox.scss";
+</style>
